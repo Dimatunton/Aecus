@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class SmellSkill : MonoBehaviour
 {
+    public bool showRange = true;
 
     public GameObject scent;
     public Material scentMat;
@@ -25,7 +26,7 @@ public class SmellSkill : MonoBehaviour
         if (context.started)
         {
             skillOff();
-            Collider[] enemyCol = Physics.OverlapSphere(transform.position, radius, EnemyLayer);
+            Collider[] enemyCol = Physics.OverlapSphere(transform.position, radius, EnemyLayer, QueryTriggerInteraction.Ignore);
 
             if (enemyCol.Length > 0)
             {
@@ -84,9 +85,10 @@ public class SmellSkill : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = new Color(1, 1, 1, .25f);
-        Gizmos.DrawSphere(transform.position, 10f);
-
-
+        if (showRange)
+        {
+            Gizmos.color = new Color(1, 1, 1, .25f);
+            Gizmos.DrawSphere(transform.position, radius);
+        }
     }
 }

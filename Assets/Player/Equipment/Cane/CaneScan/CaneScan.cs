@@ -28,7 +28,7 @@ public class CaneScan : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if(collision.TryGetComponent<Enemy>(out Enemy enemy))
+        if(!collision.isTrigger && collision.TryGetComponent<Enemy>(out Enemy enemy))
         {
             enemy.blinkDetect();
         }

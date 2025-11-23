@@ -108,7 +108,8 @@ public class EquipmentSystem : MonoBehaviour
                                 {
                                     if (hit.collider.TryGetComponent<Enemy>(out Enemy E))
                                     {
-                                        E.takeDamage(shotgunDamage);
+                                        E.TakeDamage(shotgunDamage);
+                                        print((E as SimpleEnemy).health);
                                     }
                                 }
                                 Global_Sonar.spawnSonar(hit.point, cam.forward);

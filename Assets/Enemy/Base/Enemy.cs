@@ -8,32 +8,48 @@ using static UnityEngine.UI.GridLayoutGroup;
 
 public abstract class Enemy : MonoBehaviour
 {
+
     [SerializeField] protected int maxHealth = 10;
-    [SerializeField] protected int health = 10;
-    [SerializeField] protected int speed = 3;
+    public int health = 10;
 
-    public Animator animator;
-    public NavMeshAgent agent;
+    public float speed = 3;
+    public float detectionRange = 10;
+    public float wanderRange = 3f;
 
-    public State currentState;
-    
-    
+    protected NavMeshAgent agent;
+    [SerializeField] protected Animator animator;
+    public Transform playerTransform = null;
+    protected bool playerDetected = false;
 
     QuickOutline outline = null;
     Coroutine blinkCoroutine = null;
 
-    public abstract void takeDamage(int damage);
-
+    public abstract void TakeDamage(int damage);
 
     public virtual void Start()
     {
+        health = maxHealth;
         tag = "Enemy";
+        GetComponent<SphereCollider>().radius = detectionRange / 2;
+        agent = GetComponent<NavMeshAgent>();
     }
-    public virtual void Update()
+
+    public virtual void OnTriggerEnter(Collider other)
     {
-        if(currentState != null)
+        if (other.gameObject.TryGetComponent<Movement>(out Movement player)/* CHANGE THIS TO PLAYER STAT NEXT TIME*/)
         {
-            currentState.onStateStay(this);
+            if (playerTransform == null)
+            {
+                playerTransform = player.transform;
+            }
+            playerDetected = true;
+        }
+    }
+    public virtual void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.TryGetComponent<Movement>(out Movement player))
+        {
+            playerDetected = false;
         }
     }
     public void blinkDetect()
@@ -77,12 +93,4 @@ public abstract class Enemy : MonoBehaviour
 
         blinkCoroutine = null;
     }
-    public virtual void switchState(State nextState)
-    {
-        if (nextState != currentState)
-        {
-            currentState = nextState;
-        }
-    }
-
 }

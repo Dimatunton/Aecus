@@ -14,10 +14,8 @@ public class InteractSystem : MonoBehaviour
     
     public void Interact(InputAction.CallbackContext context)
     {
-        print("no collider");
         if (context.started)
         {
-            print("asda");
             if (Physics.Raycast(cam.position, cam.forward, out objectHit, 2.2f, interactableMask, QueryTriggerInteraction.Collide))
             {
                 Interactable interactableObject;
