@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShotgunReload : MonoBehaviour
+public class EquipmentSystem_CallFunctions : MonoBehaviour
 {
 
     public EquipmentSystem equipmentSystem;
@@ -11,5 +11,8 @@ public class ShotgunReload : MonoBehaviour
     {
         equipmentSystem.addBullet();
     }
-
+    public void CaneSkillUse()
+    {
+        equipmentSystem.addBullet();
+    }
 }

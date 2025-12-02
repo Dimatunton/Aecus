@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -33,6 +34,7 @@ public class EquipmentSystem : MonoBehaviour
     [SerializeField] GameObject caneDetectSphere;
     [SerializeField] GameObject Sonar;
     float caneTimer = 0f;
+    Coroutine caneCoroutine = null;
 
 
 
@@ -40,7 +42,7 @@ public class EquipmentSystem : MonoBehaviour
     [Header("Shotgun")]
 
     [SerializeField] int shotgunDamage = 1;
-    [SerializeField] float spray = 2f;
+    [SerializeField] float spray = .2f;
     [SerializeField] float shotgunFirerate = .25f;
 
 
@@ -71,23 +73,16 @@ public class EquipmentSystem : MonoBehaviour
         switch (equiped)
         {
             case Equipments.Cane:
-                if (context.started && caneTimer >= caneCooldown)
+                if (context.started && caneTimer >= caneCooldown && caneCoroutine == null)
                 {
-                    if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hit, 3f,~0,QueryTriggerInteraction.Ignore))
+                    if (Physics.Raycast(cam.position, cam.forward, 3f,~0,QueryTriggerInteraction.Ignore))
                     {
-                        Vector3 tempPos = hit.point + hit.normal * .25f;
-                        if (lightTouchEnable)
-                        {
-                            GameObject light = Instantiate(lightTouch, tempPos, Quaternion.identity);
-                        }
-                        //collision
-                        CaneScan c = Instantiate(caneDetectSphere, tempPos, Quaternion.identity).GetComponent<CaneScan>();
-                        c.lifeSpan = 4f;
-                        c.maxSize = caneRange;
-                        //sonar
-                        Global_Sonar.spawnSonar(hit.point, Vector3.up,4f, caneRange);
-                        caneTimer = 0f;
                         playAnimation("Cane_Use");
+
+                        if (caneCoroutine == null)
+                        {
+                            caneCoroutine = StartCoroutine(useCaneSkill());
+                        }
                     }
                 }
                 break;
@@ -98,11 +93,12 @@ public class EquipmentSystem : MonoBehaviour
                     {
                         for (int i = 0; i < 5; i++)
                         {
-                            float shotgunSpray = spray * .01f;
 
+                            float offsetx = Random.Range(-spray, spray);
+                            float offsety = Random.Range(-spray, spray);
                             //Randomize the shotgun bullet
 
-                            if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hit, 20f, ~0, QueryTriggerInteraction.Ignore))
+                            if (Physics.Raycast(cam.position , cam.forward + ((cam.right * offsetx) + (cam.up * offsety)), out RaycastHit hit, 20f, ~0, QueryTriggerInteraction.Ignore))
                             {
                                 if (LayerMask.LayerToName(hit.collider.gameObject.layer) == "Enemy")
                                 {
@@ -208,5 +204,27 @@ public class EquipmentSystem : MonoBehaviour
             ammo--;
             animator.SetInteger("Bullet", bullet);
         }
+    }
+
+    IEnumerator useCaneSkill()
+    {
+        yield return new WaitForSeconds(.3f);
+
+        if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hit, 3f, ~0, QueryTriggerInteraction.Ignore))
+        {
+            Vector3 tempPos = hit.point + hit.normal * .25f;
+            if (lightTouchEnable)
+            {
+                GameObject light = Instantiate(lightTouch, tempPos, Quaternion.identity);
+            }
+            //collision
+            CaneScan c = Instantiate(caneDetectSphere, tempPos, Quaternion.identity).GetComponent<CaneScan>();
+            c.lifeSpan = 4f;
+            c.maxSize = caneRange;
+            //sonar
+            Global_Sonar.spawnSonar(hit.point, Vector3.up, 4f, caneRange);
+            caneTimer = 0f;
+        }
+        caneCoroutine = null;
     }
 }
