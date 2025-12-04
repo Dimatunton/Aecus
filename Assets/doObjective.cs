@@ -10,6 +10,7 @@ public class doObjective : Interactable
     public ObjectiveHandler ObjectiveHandler;
     public override void onInteract(Transform player)
     {
+        if (ObjectiveHandler.CheckObjective(ObjectiveTitle))
         {
             ObjectiveHandler.RemoveObjective(ObjectiveTitle);
             OnDone.Invoke();

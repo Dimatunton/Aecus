@@ -5,8 +5,8 @@ using UnityEngine;
 public static class GameManager
 {
     public static bool skillAvailable = true;
-    public static bool caneUnlocked = false;
-    public static bool ShotgunUnlocked = false;
+    public static bool caneUnlocked = true;
+    public static bool ShotgunUnlocked = true;
     public static bool ScenetSkillUnlocked = false;
 
 }

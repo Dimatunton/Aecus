@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 public class EquipmentSystem : MonoBehaviour
 {
     public Transform cam;
-    public Animator animator;
+    Animator animator;
 
     [Space(6)]
     [Header("EQUIPMENTS")]
@@ -56,6 +56,7 @@ public class EquipmentSystem : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         caneUnlocked = GameManager.caneUnlocked;
         shotgunUnlocked = GameManager.ShotgunUnlocked;
 
