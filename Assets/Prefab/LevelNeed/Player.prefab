@@ -2652,7 +2652,6 @@ GameObject:
   - component: {fileID: 8629707726164796474}
   - component: {fileID: 5919674458357979998}
   - component: {fileID: 4343960327927522720}
-  - component: {fileID: 1267779316699342170}
   m_Layer: 0
   m_Name: CameraRotationOffset
   m_TagString: Untagged
@@ -2774,75 +2773,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MouseSensitivity: 30
---- !u!114 &1267779316699342170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4746731596958056692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: 3c3a4a2c0cf80a345a5a093008f0ee7b, type: 2}
-    - {fileID: 11400000, guid: 004ab229124e6944d813b145ffc15365, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 4343960327927522720}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 5919674458357979998}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 4343960327927522720}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 5919674458357979998}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
 --- !u!1 &5051220520915068342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,7 +3282,6 @@ GameObject:
   - component: {fileID: 3246104973348565193}
   - component: {fileID: 7951040602535958113}
   - component: {fileID: 8810604340785819086}
-  - component: {fileID: 8721073977460919880}
   - component: {fileID: 5573659014799647451}
   - component: {fileID: 2218980040670390918}
   m_Layer: 29
@@ -3638,7 +3567,7 @@ MonoBehaviour:
   SPEED: 2.5
   stepSonarEnable: 1
   lightStepEnable: 1
-  lightStep: {fileID: 3575255725632634759, guid: 1c3b1104a4493444c99e16d427348bb6, type: 3}
+  lightStep: {fileID: 3575255725632634759, guid: 907bf5d48a4626246996df36e2188db3, type: 3}
   lightStepInterval: 0.5
 --- !u!114 &7951040602535958113
 MonoBehaviour:
@@ -3653,9 +3582,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 7034041566222690687}
-  animator: {fileID: 0}
   equiped: 0
-  lightTouch: {fileID: 3575255725632634759, guid: da6da952562ad4f4cbae253818f9f9e8, type: 3}
+  lightTouch: {fileID: 3575255725632634759, guid: e657c5830000ed24c8832572c8fb3e14, type: 3}
   lightTouchEnable: 1
   caneCooldown: 1
   caneRange: 15
@@ -3684,51 +3612,6 @@ MonoBehaviour:
   EnemyLayer:
     serializedVersion: 2
     m_Bits: 1024
---- !u!114 &8721073977460919880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6259438814702692792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: 3c3a4a2c0cf80a345a5a093008f0ee7b, type: 2}
-    - {fileID: 11400000, guid: 004ab229124e6944d813b145ffc15365, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3246104973348565193}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3246104973348565193}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
 --- !u!114 &5573659014799647451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5049,7 +4932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3304507100576705012, guid: 05ec0d08e7d16b349965ddaa0d4e37df, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7670720295663396367, guid: 05ec0d08e7d16b349965ddaa0d4e37df, type: 3}
       propertyPath: m_LocalScale.x
