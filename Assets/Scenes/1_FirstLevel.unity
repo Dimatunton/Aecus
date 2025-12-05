@@ -23,9 +23,9 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.3
+  m_AmbientIntensity: 0.77
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
+  m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.439
   m_FlareStrength: 1
@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 255912be8608fa642a6a16f0fbac44f4, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 41b3f9fe65a82114583eba0181ec28e8, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -4701,7 +4701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1471fca7c0d072e4e960452044c465b1, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12021,7 +12021,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.5990566, g: 0.9963009, b: 1, a: 1}
-  m_Intensity: 4.58
+  m_Intensity: 1.5
   m_Range: 14.13
   m_SpotAngle: 179
   m_InnerSpotAngle: 170.80208
@@ -27378,7 +27378,7 @@ Transform:
   m_GameObject: {fileID: 781923235}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710576, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 3.2, y: 2.01, z: 6.2}
+  m_LocalPosition: {x: 3.2, y: 2.005, z: 6.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30887,7 +30887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1471fca7c0d072e4e960452044c465b1, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37518,7 +37518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1471fca7c0d072e4e960452044c465b1, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -39586,7 +39586,7 @@ Transform:
   m_GameObject: {fileID: 1261003755}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710576, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 9.91, y: 2.1799998, z: 0.22}
+  m_LocalPosition: {x: 9.91, y: 2.83, z: 0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39627,8 +39627,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 40.9
+  m_Intensity: 2.2
+  m_Range: 41.03
   m_SpotAngle: 179
   m_InnerSpotAngle: 170.80208
   m_CookieSize: 10
@@ -39670,7 +39670,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 16117
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -40083,7 +40083,7 @@ Transform:
   m_GameObject: {fileID: 1273117086}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710576, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 9.91, y: 2.01, z: 6.13}
+  m_LocalPosition: {x: 9.91, y: 1.27, z: 6.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43341,7 +43341,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.5990566, g: 0.9963009, b: 1, a: 1}
-  m_Intensity: 4.58
+  m_Intensity: 1.5
   m_Range: 14.13
   m_SpotAngle: 179
   m_InnerSpotAngle: 170.80208
@@ -70934,7 +70934,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.5990566, g: 0.9963009, b: 1, a: 1}
-  m_Intensity: 4.58
+  m_Intensity: 1.5
   m_Range: 14.13
   m_SpotAngle: 179
   m_InnerSpotAngle: 170.80208
@@ -73954,7 +73954,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.5990566, g: 0.9963009, b: 1, a: 1}
-  m_Intensity: 4.58
+  m_Intensity: 1.5
   m_Range: 14.13
   m_SpotAngle: 179
   m_InnerSpotAngle: 170.80208
