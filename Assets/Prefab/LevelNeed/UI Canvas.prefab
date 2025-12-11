@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 268, y: 192}
+  m_AnchoredPosition: {x: 385.19, y: 209.56}
   m_SizeDelta: {x: 49.8658, y: 12.4664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4161044403447041647
@@ -209,7 +209,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Turn off the Kalan
+          m_StringArgument: Calm down the customer in king costume
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6995951372693832274}
+        m_TargetAssemblyTypeName: ObjectiveHandler, Assembly-CSharp
+        m_MethodName: AddNewObjectives
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stop the dancing girl and explain the situation
           m_BoolArgument: 0
         m_CallState: 2
   ObjectivesTemplate: {fileID: 3826574763901922431, guid: 05fa1f90ff33d564a895014e8c492473, type: 3}
@@ -239,9 +251,9 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 10.38
+  m_Spacing: 0
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
+  m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
@@ -325,7 +337,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' '
+  m_Text: '
+
+'
 --- !u!1 &5806015020229876047
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,13 +426,14 @@ GameObject:
   - component: {fileID: 6804359970729489596}
   - component: {fileID: 1922690856742820424}
   - component: {fileID: 638002031211328708}
+  - component: {fileID: 330113694058316612}
   m_Layer: 5
   m_Name: Objectives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6804359970729489596
 RectTransform:
   m_ObjectHideFlags: 0
@@ -478,6 +493,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &330113694058316612
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7136892018930410869}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00efa7d4398d6bb4fbc29b0e4f907c75, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7822767492159392258
 GameObject:
   m_ObjectHideFlags: 0

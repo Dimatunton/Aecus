@@ -17,7 +17,6 @@ public class ObjectiveHandler : MonoBehaviour
 
     public void AddNewObjectives(string objectivesTitle)
     {
-
         GameObject OT = Instantiate(ObjectivesTemplate, transform);
         OT.GetComponent<TextMeshProUGUI>().text = "* " + objectivesTitle;
 

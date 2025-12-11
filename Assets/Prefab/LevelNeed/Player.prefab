@@ -3626,7 +3626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RigLayers:
   - m_Rig: {fileID: 3022863245218599609}
-    m_Active: 1
+    m_Active: 0
   m_Effectors: []
 --- !u!95 &2218980040670390918
 Animator:
