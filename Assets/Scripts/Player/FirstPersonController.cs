@@ -17,8 +17,6 @@ public class FirstPersonController : MonoBehaviour
     private Vector2 mouseDelta;
     private Vector3 camRotation;
 
-    bool trackMouseInput = false;
-
     //TrackedPoseDriver trackedPoseDriver;
 
     bool onMobile = false;

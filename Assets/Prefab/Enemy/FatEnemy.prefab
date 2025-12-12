@@ -518,7 +518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   health: 10
-  speed: 3
+  speed: 2.5
   detectionRange: 10
   wanderRange: 3
   animator: {fileID: 7605416697121901132}

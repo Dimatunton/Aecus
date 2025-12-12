@@ -7,13 +7,19 @@ public abstract class Interactable : MonoBehaviour
     QuickOutline outline;
 
     public bool showOutline = false;
+
+    Coroutine showOnScan = null;
+
+
+    public abstract void onInteract(Transform player);
+
     protected virtual void Start()
     {
         gameObject.layer = LayerMask.NameToLayer("Interactable");
 
         if(!TryGetComponent<QuickOutline>(out outline))
         {
-            print("no outline");
+            Debug.Log("No outline",gameObject);
         }
 
         //use for overiding start
@@ -24,20 +30,24 @@ public abstract class Interactable : MonoBehaviour
         //        }
 
     }
-    public abstract void onInteract(Transform player);
 
     protected virtual void Update()
     {
-
         if ((outline != null))
         {
             if (showOutline)
             {
-                outline.enabled = true;
+                if(outline.OutlineWidth < 1f)
+                {
+                    outline.OutlineWidth += Time.deltaTime;
+                }
             }
             else
             {
-                outline.enabled = false;
+                if (outline.OutlineWidth > 0f)
+                {
+                    outline.OutlineWidth -= Time.deltaTime;
+                }
             }
         }
     }
@@ -50,4 +60,28 @@ public abstract class Interactable : MonoBehaviour
             outline.enabled = false;
         }
     }
+
+    public void ScanShow()
+    {
+        if(outline != null)
+        {
+            if (showOnScan != null)
+            {
+                StopCoroutine(showOnScan);
+                showOnScan = StartCoroutine(ShowOnScan());
+            }
+            else
+            {
+                showOnScan = StartCoroutine(ShowOnScan());
+            }
+        }
+    }
+
+    IEnumerator ShowOnScan()
+    {
+        showOutline = true;
+        yield return new WaitForSeconds(4f);
+        showOutline = false;
+    }
+
 }
