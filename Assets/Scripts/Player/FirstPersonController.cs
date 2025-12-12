@@ -19,7 +19,7 @@ public class FirstPersonController : MonoBehaviour
 
     bool trackMouseInput = false;
 
-    TrackedPoseDriver trackedPoseDriver;
+    //TrackedPoseDriver trackedPoseDriver;
 
     bool onMobile = false;
 
@@ -28,7 +28,7 @@ public class FirstPersonController : MonoBehaviour
         if (!(Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer))
         {
             onMobile = true;
-            trackedPoseDriver = GetComponent<TrackedPoseDriver>(); 
+            //trackedPoseDriver = GetComponent<TrackedPoseDriver>(); 
         }
         cam = transform;
         camRotation = cam.rotation.eulerAngles;
@@ -48,7 +48,7 @@ public class FirstPersonController : MonoBehaviour
         }
         else
         {
-            trackedPoseDriver.enabled = false;
+            //trackedPoseDriver.enabled = false;
         }
     }
 

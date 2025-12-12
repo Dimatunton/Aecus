@@ -15123,7 +15123,8 @@ MonoBehaviour:
   template:
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 14
-    text: 'William: I should ask the costumers and calm them down before the '
+    text: 'William: I should ask the costumers and calm them down before telling
+      them the situation'
 --- !u!114 &-4286094218518513107
 MonoBehaviour:
   m_ObjectHideFlags: 1

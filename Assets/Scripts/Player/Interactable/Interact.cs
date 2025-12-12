@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class InteractSystem : MonoBehaviour
 {
@@ -12,33 +13,43 @@ public class InteractSystem : MonoBehaviour
     public MeshRenderer interactSphere;
     [SerializeField] private LayerMask interactableMask;
 
+    Interactable interactableObject;
+
     private void Update()
     {
-        Physics.Raycast(cam.position, cam.forward, out objectHit, 2.2f, interactableMask, QueryTriggerInteraction.Collide);
-        if(objectHit.collider!= null)
+        Physics.Raycast(cam.position, cam.forward, out RaycastHit tempHit, 2.2f, interactableMask, QueryTriggerInteraction.Collide);
+
+        if (tempHit.collider != null)
         {
+            if (tempHit.collider.TryGetComponent<Interactable>(out Interactable tempInteractable))
+            {
+                if (interactableObject != null)
+                {
+                    interactableObject.showOutline = false;
+                }
+                interactableObject = tempInteractable;
+                interactableObject.showOutline = true;
+            }
             interactSphere.sharedMaterial.color = Color.green;
         }
         else
         {
+            if(interactableObject != null) 
+            { 
+                interactableObject.showOutline = false;
+                interactableObject = null;
+            }
             interactSphere.sharedMaterial.color = Color.white;
         }
-
     }
 
     public void Interact(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            if (objectHit.collider != null)
+            if (interactableObject != null)
             {
-                Interactable interactableObject;
-
-                if (objectHit.collider.TryGetComponent<Interactable>(out interactableObject))
-                {
-                    interactableObject.onInteract(transform);
-                }
-
+                interactableObject.onInteract(transform);
             }
             else
             {
