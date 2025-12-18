@@ -81,7 +81,7 @@ Material:
     - _Metallic: 0
     - _Mode: 2
     - _OcclusionStrength: 1
-    - _OverallAlpha: 1.0040929
+    - _OverallAlpha: 0.41070783
     - _Parallax: 0.02
     - _Sharpness: 1.65
     - _SideFade: 0.5

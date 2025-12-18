@@ -10560,7 +10560,7 @@ Transform:
   m_GameObject: {fileID: 336715111}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.58, y: 0, z: 7.33}
+  m_LocalPosition: {x: 0.78, y: 0, z: 7.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10578,7 +10578,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eb730b3e46cf11340bcabdae179a73ed, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.08
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -61354,7 +61354,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Continue cooking
+          m_StringArgument: Chop Cabbage
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1667654116}
@@ -69589,7 +69589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showOutline: 0
-  ObjectiveTitle: Continue cooking
+  ObjectiveTitle: Chop Cabbage
   OnDone:
     m_PersistentCalls:
       m_Calls:
@@ -72495,19 +72495,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 963d2c21e60e11c4ab1b8a57bbab3b3c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.41
+      value: 3.394
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 963d2c21e60e11c4ab1b8a57bbab3b3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: -0.172
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 963d2c21e60e11c4ab1b8a57bbab3b3c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.01
+      value: 4.176
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 963d2c21e60e11c4ab1b8a57bbab3b3c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5669665
+      value: -0.16060519
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 963d2c21e60e11c4ab1b8a57bbab3b3c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -72515,7 +72515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 963d2c21e60e11c4ab1b8a57bbab3b3c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8237409
+      value: 0.98701876
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 963d2c21e60e11c4ab1b8a57bbab3b3c, type: 3}
       propertyPath: m_LocalRotation.z
@@ -72527,7 +72527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 963d2c21e60e11c4ab1b8a57bbab3b3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -249.078
+      value: -161.516
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 963d2c21e60e11c4ab1b8a57bbab3b3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -78655,7 +78655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
       propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
       propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -78672,11 +78672,11 @@ PrefabInstance:
     - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
       propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 462427735994731132}
+      objectReference: {fileID: 1371786362}
     - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
       propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2045923675}
+      objectReference: {fileID: 462427735994731132}
     - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
       propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -78715,7 +78715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
       propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: AddNewObjectives
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
       propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -78735,7 +78735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
       propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ObjectiveHandler, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
       propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -78750,8 +78750,12 @@ PrefabInstance:
       value: ObjectiveHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
+      propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
       propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: Calm down the  customer in king costume
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: -3926230324709172364, guid: 5abe0a5e3febe8a41bc8e1ff6bb654f3, type: 3}
       propertyPath: onTimelineActivate.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
