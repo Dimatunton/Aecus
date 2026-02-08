@@ -14,9 +14,11 @@ TagManager:
   - UI
   - Interactable
   - 
-  - YuME_TileMap
-  - Interactive
-  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -36,8 +38,6 @@ TagManager:
   - 
   - 
   - Player
-  - masktest
-  - StackCamera
   m_SortingLayers:
   - name: Default
     uniqueID: 0
