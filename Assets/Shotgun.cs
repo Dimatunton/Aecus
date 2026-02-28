@@ -25,7 +25,7 @@ public class Shotgun : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            transform.localPosition = Vector3.zero;
+            rb.MovePosition(transform.parent.position);
             transform.localRotation = Quaternion.Euler(new Vector3(90, 0, 0));
         }
     }

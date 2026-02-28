@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Cane : MonoBehaviour
 {
@@ -8,10 +9,12 @@ public class Cane : MonoBehaviour
 
     private Rigidbody rb;
     private bool isGrabbed = false;
+    private XRGrabInteractable grabComponent;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        grabComponent = GetComponent<XRGrabInteractable>();
     }
 
     private void FixedUpdate()
@@ -20,8 +23,8 @@ public class Cane : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            transform.localPosition = Vector3.zero;
-            transform.localRotation = Quaternion.Euler(new Vector3(90, 0, 0));
+            rb.MovePosition(transform.parent.position);
+            transform.localRotation = Quaternion.Euler(Vector3.zero);
         }
     }
     public void selected()
@@ -41,9 +44,10 @@ public class Cane : MonoBehaviour
             Debug.LogError("No Sonar Script assigned to the cane!");
             return;
         }
-        
-            sonarScript.StartSonarRing(collision.contacts[0].point, 4f);
-        
-        
+       
+        if(grabComponent.interactorsSelecting.Count > 0)
+        {
+            sonarScript.StartSonarRing(collision.contacts[0].point, 10f);
+        }
     }
 }

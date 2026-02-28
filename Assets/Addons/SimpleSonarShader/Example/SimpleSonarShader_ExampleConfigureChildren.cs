@@ -18,9 +18,12 @@ public class SimpleSonarShader_ExampleConfigureChildren : MonoBehaviour {
 
         foreach(Renderer rend in GetComponentsInChildren<Renderer>(true))
         {
-            Texture mainTex = rend.material.mainTexture;
-            rend.material = SonarMaterial;
-            rend.material.mainTexture = mainTex;
+            for(int i = 0; i < rend.materials.Length; i++)
+            {
+                Texture mainTex = rend.materials[i].mainTexture;
+                rend.materials[i] = SonarMaterial;
+                rend.materials[i].mainTexture = mainTex;
+            }
         }
     }
 
