@@ -45,7 +45,7 @@ public class Shotgun : MonoBehaviour
 
     public void activated()
     {
-        
+        print("asdasd");
         for (int i = 0; i < 3; i++)
         {
             float tempShotgunSpread = ShotgunSpread;
@@ -57,6 +57,7 @@ public class Shotgun : MonoBehaviour
             float xrandom = Random.Range(-tempShotgunSpread, tempShotgunSpread);
             float yrandom = Random.Range(-tempShotgunSpread, tempShotgunSpread);
             float zrandom = Random.Range(-tempShotgunSpread, tempShotgunSpread);
+
             RaycastHit hit;
 
             Physics.Raycast(new Vector3(gunpont.position.x + xrandom, gunpont.position.y + yrandom, gunpont.position.z + zrandom), gunpont.forward, out hit, 25f);
