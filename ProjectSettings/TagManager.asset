@@ -5,12 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Bullet Cartridges
+  - Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Post-Processing
+  - 
   - Water
   - UI
   - 
@@ -37,7 +37,7 @@ TagManager:
   - 
   - 
   - 
-  - Grabable
+  - 
   - Player
   m_SortingLayers:
   - name: Default

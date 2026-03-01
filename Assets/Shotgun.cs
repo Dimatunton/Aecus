@@ -80,16 +80,14 @@ public class Shotgun : MonoBehaviour
 
     public bool reload()
     {
-        if (bulletCount > 2)
+        if (bulletCount > 1)
         {
             updateBulletCount();
-            print("!");
             return false;
         }
         else
         {
             bulletCount++;
-            print("!!");
             updateBulletCount();
             return true;
         }

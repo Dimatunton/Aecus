@@ -32,8 +32,4 @@ public class BulletPouch : MonoBehaviour
         bullet.transform.localRotation = Quaternion.Euler(Vector3.zero);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        print(other.gameObject.name);
-    }
 }
