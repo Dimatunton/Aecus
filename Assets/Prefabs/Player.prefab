@@ -805,6 +805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3669106097147601246}
   - component: {fileID: 5217302853138943157}
+  - component: {fileID: 865139069750495251}
   m_Layer: 0
   m_Name: BulletPouch
   m_TagString: Untagged
@@ -851,6 +852,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14623544, y: 0.17486247, z: 0.13218486}
   m_Center: {x: 0, y: 0.058218256, z: 0}
+--- !u!114 &865139069750495251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583110983976837608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e618d2ff0656ee14fb35b32b772c37e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pouch1: {fileID: 3613331789608212830}
+  pouch2: {fileID: 5341826767674337929}
+  bullet: {fileID: 7075463845071250595}
 --- !u!1 &1072602942743547107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9190754244909049475}
   - component: {fileID: 4155280506900448438}
-  - component: {fileID: 7208340848129743475}
+  - component: {fileID: 8864180833360224375}
   m_Layer: 0
   m_Name: Bullet Cartridges
   m_TagString: Bullet Cartridges
@@ -1799,8 +1815,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2221644856444645007}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.026, y: 0.039, z: 0.156}
+  m_LocalRotation: {x: 0.000011086463, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.026000023, y: 0.039000005, z: 0.15599999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1821,72 +1837,39 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.0885517, y: 0.117394224, z: 0.17082402}
   m_Center: {x: 0.030991405, y: 0.003946863, z: 0.0027908683}
---- !u!114 &7208340848129743475
-MonoBehaviour:
+--- !u!54 &8864180833360224375
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2221644856444645007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
-  m_InteractionLayerMask:
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 1073741824
-  m_AttachTransform: {fileID: 0}
-  m_KeepSelectedTargetValid: 1
-  m_DisableVisualsWhenBlockedInGroup: 1
-  m_StartingSelectedInteractable: {fileID: 0}
-  m_StartingTargetFilter: {fileID: 0}
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 0}
-  m_InteractableCantHoverMeshMaterial: {fileID: 0}
-  m_SocketActive: 1
-  m_InteractableHoverScale: 1
-  m_RecycleDelayTime: 1
-  m_HoverSocketSnapping: 0
-  m_SocketSnappingRadius: 0.1
-  m_SocketScaleMode: 0
-  m_FixedScale: {x: 1, y: 1, z: 1}
-  m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2434935645580894594
 GameObject:
   m_ObjectHideFlags: 0
@@ -4209,7 +4192,6 @@ GameObject:
   - component: {fileID: 4844644576888478815}
   - component: {fileID: 6258915197081031199}
   - component: {fileID: 8610348808944727819}
-  - component: {fileID: 6755452549082337183}
   m_Layer: 0
   m_Name: ShotgunCanvas
   m_TagString: Untagged
@@ -4300,20 +4282,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6755452549082337183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8705376486186227548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 631775f63f4d88b4796a45ec4a979850, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotgunScript: {fileID: 8363298766553421449}
-  bulletText: {fileID: 6716318339905114500}
 --- !u!1 &8921250140042217393
 GameObject:
   m_ObjectHideFlags: 0
@@ -4537,6 +4505,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eeec47ce3bd945a4cb24c4a72dfbf414, type: 3}
+--- !u!1 &3613331789608212830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eeec47ce3bd945a4cb24c4a72dfbf414, type: 3}
+  m_PrefabInstance: {fileID: 4531830480344212495}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4138511957500691428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eeec47ce3bd945a4cb24c4a72dfbf414, type: 3}
@@ -4653,6 +4626,11 @@ PrefabInstance:
 --- !u!4 &4713627823117873203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eeec47ce3bd945a4cb24c4a72dfbf414, type: 3}
+  m_PrefabInstance: {fileID: 5107243560532170712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5341826767674337929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eeec47ce3bd945a4cb24c4a72dfbf414, type: 3}
   m_PrefabInstance: {fileID: 5107243560532170712}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5935648842687320429
@@ -4772,7 +4750,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1073741824
+    m_Bits: 4294967295
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -4786,10 +4764,34 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 865139069750495251}
+        m_TargetAssemblyTypeName: BulletPouch, Assembly-CSharp
+        m_MethodName: EnterHover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 865139069750495251}
+        m_TargetAssemblyTypeName: BulletPouch, Assembly-CSharp
+        m_MethodName: exitHover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4807,7 +4809,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 865139069750495251}
+        m_TargetAssemblyTypeName: BulletPouch, Assembly-CSharp
+        m_MethodName: Unselected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -5116,6 +5130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunpont: {fileID: 2842536474689711694}
   sonarScript: {fileID: 0}
+  ammoText: {fileID: 6716318339905114500}
   ShotgunSpread: 0.2
   bulletCount: 2
 --- !u!54 &7360340176392372019
@@ -5197,18 +5212,6 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8363298766553421449}
-        m_TargetAssemblyTypeName: Shotgun, Assembly-CSharp
-        m_MethodName: selected
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 8260156007426016190}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -5221,7 +5224,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 6755452549082337183}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShotgunCanvas, Assembly-CSharp
         m_MethodName: UpdateBullet
         m_Mode: 1
@@ -5287,7 +5290,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6755452549082337183}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShotgunCanvas, Assembly-CSharp
         m_MethodName: UpdateBullet
         m_Mode: 1

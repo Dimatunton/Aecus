@@ -7,7 +7,9 @@ public class BulletPouch : MonoBehaviour
 {
     public GameObject pouch1;
     public GameObject pouch2;
-    public XRBaseInteractable bullet;
+    public GameObject bullet;
+
+    public GameObject bulletPrefab;
 
     public void EnterHover()
     {
@@ -22,8 +24,16 @@ public class BulletPouch : MonoBehaviour
         pouch2.SetActive(false);
     }
 
-    public void activate(XRBaseInteractor interactor)
+    public void Unselected()
     {
-        interactor.StartManualInteraction((IXRSelectInteractable)bullet);
+        Instantiate(bulletPrefab,bullet.transform.position,Quaternion.identity);
+
+        bullet.transform.localPosition = Vector3.zero;
+        bullet.transform.localRotation = Quaternion.Euler(Vector3.zero);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print(other.gameObject.name);
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -7,6 +8,8 @@ public class Shotgun : MonoBehaviour
 {
     public Transform gunpont = null;
     public SimpleSonarShader_Parent sonarScript = null;
+    public TextMeshProUGUI ammoText = null;
+
     public float ShotgunSpread = .2f;
     public int bulletCount = 2;
 
@@ -19,6 +22,7 @@ public class Shotgun : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         grabComponent = GetComponent<XRGrabInteractable>();
+        updateBulletCount();
     }
 
     private void FixedUpdate()
@@ -70,19 +74,30 @@ public class Shotgun : MonoBehaviour
                 sonarScript.StartSonarRing(hit.point, 3f);
             }
             bulletCount--;
+            updateBulletCount();
         }
     }
 
     public bool reload()
     {
-        if(bulletCount > 2)
+        if (bulletCount > 2)
         {
+            updateBulletCount();
+            print("!");
             return false;
         }
         else
         {
             bulletCount++;
+            print("!!");
+            updateBulletCount();
             return true;
         }
+    }
+
+    void updateBulletCount()
+    {
+        ammoText.text = bulletCount.ToString();
+        print("Bullet Count is :" + bulletCount);
     }
 }
