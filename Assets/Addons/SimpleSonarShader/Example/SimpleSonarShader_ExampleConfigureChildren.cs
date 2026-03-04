@@ -10,21 +10,37 @@ public class SimpleSonarShader_ExampleConfigureChildren : MonoBehaviour {
 
     private void Start()
     {
-        // this is the default Oncollision code
-        //foreach(Collider col in GetComponentsInChildren<Collider>(true))
+        //foreach (Collider col in GetComponentsInChildren<Collider>(true))
         //{
         //    col.gameObject.AddComponent<SimpleSonarShader_ExampleCollision>();
         //}
 
-        foreach(Renderer rend in GetComponentsInChildren<Renderer>(true))
+        //foreach (Renderer rend in GetComponentsInChildren<Renderer>(true))
+        //{
+        //    Texture mainTex = rend.material.mainTexture;
+        //    rend.material = SonarMaterial;
+        //    rend.material.mainTexture = mainTex;
+        //}
+
+        foreach (Renderer rend in GetComponentsInChildren<Renderer>(true))
         {
-            for(int i = 0; i < rend.materials.Length; i++)
+            Material[] mats = rend.materials;
+
+            for (int i = 0; i < mats.Length; i++)
             {
-                Texture mainTex = rend.materials[i].mainTexture;
-                rend.materials[i] = SonarMaterial;
-                rend.materials[i].mainTexture = mainTex;
+                Texture mainTex = mats[i].GetTexture("_MainTex");
+                Color color = mats[i].color;
+
+                Material newMat = new Material(SonarMaterial);
+                newMat.SetTexture("_MainTex", mainTex);
+                newMat.color = color;
+
+                mats[i] = newMat;
             }
+
+            rend.materials = mats;
         }
+
     }
 
 }

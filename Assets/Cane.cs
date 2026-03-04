@@ -21,9 +21,7 @@ public class Cane : MonoBehaviour
     {
         if (!isGrabbed)
         {
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            rb.MovePosition(transform.parent.position);
+            transform.localPosition = Vector3.zero;
             transform.localRotation = Quaternion.Euler(Vector3.zero);
         }
     }
