@@ -1,0 +1,38 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ObjectivesManager : MonoBehaviour
+{
+    public List<Text> objList = new List<Text>();
+
+    public void clearObjectives()
+    {
+        foreach(Text t  in objList)
+        {
+            t.GetComponent<Animator>().Play("Outro");
+        }
+    }
+
+    public void addObjective(int Index, string ObjectiveDescription)
+    {
+        objList[Index].text = ObjectiveDescription;
+        objList[Index].GetComponent<Animator>().Play("Intro");
+    }
+
+    public void doneObjective(string ObjectiveDescription)
+    {
+        bool objExist = false;
+        foreach(Text t in objList)
+        {
+            if (!objExist && t.text == ObjectiveDescription)
+            {
+                print("QWe");
+                t.color = Color.green;
+                objExist = true;
+            }
+        }
+    }
+}
