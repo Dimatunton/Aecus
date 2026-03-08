@@ -83,13 +83,13 @@ ModelImporter:
     serializedVersion: 3
     human: []
     skeleton:
-    - name: Beach@Goofy Running(Clone)
+    - name: Main Avatar(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Hips
-      parentName: Beach@Goofy Running(Clone)
+      parentName: Main Avatar(Clone)
       position: {x: 0.005350475, y: 1.073701, z: 0.021209078}
       rotation: {x: 0.030704012, y: -0.057488542, z: -0.03942798, w: 0.9970947}
       scale: {x: 1, y: 1, z: 1}
