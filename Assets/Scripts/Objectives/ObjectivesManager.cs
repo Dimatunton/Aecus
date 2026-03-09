@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ObjectivesManager : MonoBehaviour
 {
+
     public List<Text> objList = new List<Text>();
 
     public void clearObjectives()
@@ -18,6 +19,8 @@ public class ObjectivesManager : MonoBehaviour
 
     public void addObjective(int Index, string ObjectiveDescription)
     {
+
+        objList[Index].color = Color.white;
         objList[Index].text = ObjectiveDescription;
         objList[Index].GetComponent<Animator>().Play("Intro");
     }
@@ -29,7 +32,6 @@ public class ObjectivesManager : MonoBehaviour
         {
             if (!objExist && t.text == ObjectiveDescription)
             {
-                print("QWe");
                 t.color = Color.green;
                 objExist = true;
             }

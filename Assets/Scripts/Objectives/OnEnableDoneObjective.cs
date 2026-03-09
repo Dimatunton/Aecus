@@ -12,7 +12,6 @@ public class DoneObjectives : MonoBehaviour
         for (int i = 0; i < objectList.Length; i++)
         {
             ObjectivesManager.doneObjective(objectList[i]);
-            print(1);
         }
     }
 }
