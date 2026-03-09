@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class AddObjectives : MonoBehaviour
+public class OnEnableAddObjectives : MonoBehaviour
 {
+    public UnityEvent onEnable;
+
     public ObjectivesManager ObjectivesManager;
     public string[] objectList;
 
 
-    public void addObjectives()
+    private void OnEnable()
     {
+        onEnable.Invoke();
         StartCoroutine(addobjs());
     }
 

@@ -13,6 +13,7 @@ public class ObjectivesManager : MonoBehaviour
     {
         foreach(Text t  in objList)
         {
+            t.color = Color.green;
             t.GetComponent<Animator>().Play("Outro");
         }
     }

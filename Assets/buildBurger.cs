@@ -62,6 +62,8 @@ public class buildBurger : MonoBehaviour
         else if (other.name == "Bread" && !TopBread && Letuce)
         {
             TopBread = true;
+            other.gameObject.SetActive(false);
+            other.gameObject.SetActive(true);
             fullBurger.SetActive(true);
             gameObject.SetActive(false);
         }
