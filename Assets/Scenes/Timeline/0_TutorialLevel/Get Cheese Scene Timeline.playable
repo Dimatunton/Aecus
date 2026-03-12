@@ -15,7 +15,7 @@ MonoBehaviour:
   template:
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 14
-    text: i think i put the cheese on ref
+    text: (sa pag kakaalala ko sa ref ko nilagay ang chees)
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
