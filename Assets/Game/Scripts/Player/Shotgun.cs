@@ -23,6 +23,7 @@ public class Shotgun : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         grabComponent = GetComponent<XRGrabInteractable>();
         updateBulletCount();
+        sonarScript = SimpleSonarShader_Parent.Instance;
     }
 
     private void FixedUpdate()

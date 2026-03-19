@@ -1,6 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 using System.IO;
+using System.Text.RegularExpressions;
 
 public class AutoSuffixAssets : AssetPostprocessor
 {
@@ -134,11 +135,11 @@ public class AutoSuffixAssets : AssetPostprocessor
             case ".hdr":
                 suffix = "_tex"; break;
 
-            // Models
-            case ".fbx":
-            case ".obj":
-            case ".blend":
-                suffix = "_model"; break;
+            //// Models
+            //case ".fbx":
+            //case ".obj":
+            //case ".blend":
+            //    suffix = "_model"; break;
 
             // Prefabs
             case ".prefab": suffix = "_prefab"; break;
@@ -195,20 +196,115 @@ public class AutoSuffixAssets : AssetPostprocessor
         if (string.IsNullOrEmpty(suffix)) return;
         if (fileName.EndsWith(suffix)) return;
 
-        string newName = fileName + suffix;
+        string oldPath = path;
+        string ext = extension; // capture for closure
 
-        AssetDatabase.RenameAsset(path, newName);
-
-        string newPath = Path.GetDirectoryName(path) + "/" + newName + extension;
-
+        // Delay rename until after Unity finishes import to avoid the "Main Object Name ... does not match filename" warning.
         EditorApplication.delayCall += () =>
         {
-            Object obj = AssetDatabase.LoadAssetAtPath<Object>(newPath);
-            if (obj != null)
+            // Ensure asset still exists
+            Object mainBefore = AssetDatabase.LoadMainAssetAtPath(oldPath);
+            if (mainBefore == null)
+                return;
+
+            // Directory
+            string directory = Path.GetDirectoryName(oldPath).Replace("\\", "/");
+            if (string.IsNullOrEmpty(directory))
+                directory = "Assets";
+
+            // Start from the incoming filename without extension
+            string currentName = Path.GetFileNameWithoutExtension(oldPath);
+
+            // Determine basePart and existingNumber robustly.
+            // Handles:
+            // - "Base"
+            // - "Base 1"
+            // - "Base_suffix"           -> suffix present at end
+            // - "Base_suffix 1"         -> Unity duplicate pattern (suffix then number)
+            // - "Base 1_suffix"         -> number before suffix
+            string basePart;
+            int existingNumber = 0;
+
+            int suffixIdx = currentName.LastIndexOf(suffix, System.StringComparison.Ordinal);
+            if (suffixIdx >= 0)
             {
-                obj.name = newName;
-                EditorUtility.SetDirty(obj);
+                // There is a suffix somewhere in the name.
+                string left = currentName.Substring(0, suffixIdx).TrimEnd();
+                string right = currentName.Substring(suffixIdx + suffix.Length).Trim();
+
+                if (Regex.IsMatch(right, @"^\d+$"))
+                {
+                    // Pattern: left + suffix + " " + duplicateNumber
+                    // Example: "New Material 2_mat 1"
+                    // We want to take the trailing number from 'left' (2) as the existingNumber.
+                    var leftMatch = Regex.Match(left, @"^(.*?)(?:\s+(\d+))?$");
+                    basePart = leftMatch.Success ? leftMatch.Groups[1].Value.TrimEnd() : left;
+                    existingNumber = (leftMatch.Success && leftMatch.Groups[2].Success) ? int.Parse(leftMatch.Groups[2].Value) : 0;
+                }
+                else
+                {
+                    // Pattern: left + suffix  (maybe left contains trailing number)
+                    // Example: "New Material 2_mat" or "New Material_mat"
+                    var leftMatch = Regex.Match(left, @"^(.*?)(?:\s+(\d+))?$");
+                    basePart = leftMatch.Success ? leftMatch.Groups[1].Value.TrimEnd() : left;
+                    existingNumber = (leftMatch.Success && leftMatch.Groups[2].Success) ? int.Parse(leftMatch.Groups[2].Value) : 0;
+                }
             }
+            else
+            {
+                // No suffix present. The current name might include a trailing number.
+                var m = Regex.Match(currentName, @"^(.*?)(?:\s+(\d+))?$");
+                basePart = m.Success ? m.Groups[1].Value.TrimEnd() : currentName;
+                existingNumber = (m.Success && m.Groups[2].Success) ? int.Parse(m.Groups[2].Value) : 0;
+            }
+
+            // Choose starting counter:
+            // - if there is already a trailing number, start from existingNumber + 1
+            // - otherwise start from 0 (meaning no number)
+            int counter = existingNumber > 0 ? existingNumber + 1 : 0;
+            const int maxAttempts = 1000;
+            string candidateName = null;
+            string candidatePath = null;
+
+            // Try candidates until one is unused
+            for (int attempt = 0; attempt <= maxAttempts; attempt++)
+            {
+                string counterPart = counter == 0 ? "" : " " + counter.ToString();
+                candidateName = basePart + counterPart + suffix; // number before suffix
+                candidatePath = directory + "/" + candidateName + ext;
+
+                if (AssetDatabase.LoadMainAssetAtPath(candidatePath) == null)
+                    break;
+
+                counter++;
+            }
+
+            if (string.IsNullOrEmpty(candidatePath) || AssetDatabase.LoadMainAssetAtPath(candidatePath) != null)
+            {
+                Debug.LogError($"AutoSuffix: failed to find unique name for '{oldPath}' after {maxAttempts} attempts.");
+                return;
+            }
+
+            // Attempt rename to the chosen candidate (pass only filename without extension)
+            string candidateFileNameWithoutExt = Path.GetFileNameWithoutExtension(candidatePath);
+            string renameError = AssetDatabase.RenameAsset(oldPath, candidateFileNameWithoutExt);
+            if (!string.IsNullOrEmpty(renameError))
+            {
+                Debug.LogError($"Failed to rename asset '{oldPath}' to '{candidateFileNameWithoutExt}': {renameError}");
+                return;
+            }
+
+            // Load the asset at the final path and make sure its main object's name matches the filename
+            Object mainAfter = AssetDatabase.LoadMainAssetAtPath(candidatePath);
+            if (mainAfter != null)
+            {
+                mainAfter.name = candidateFileNameWithoutExt;
+                EditorUtility.SetDirty(mainAfter);
+                AssetDatabase.SaveAssets();
+            }
+
+            // Refresh to update Project window
+            AssetDatabase.Refresh();
         };
     }
 }

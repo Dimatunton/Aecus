@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class SimpleSonarShader_Parent : MonoBehaviour
 {
+    public static SimpleSonarShader_Parent Instance;
 
     // All the renderers that will have the sonar data sent to their shaders.
     private Renderer[] ObjectRenderers;
@@ -26,6 +27,10 @@ public class SimpleSonarShader_Parent : MonoBehaviour
     // These are kept in the same order as the positionsQueue.
     private Queue<float> intensityQueue = new Queue<float>(QueueSize);
 
+    private void Awake()
+    {
+        SimpleSonarShader_Parent.Instance = this;
+    }
 
     private void Start()
     {

@@ -15,6 +15,7 @@ public class Cane : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         grabComponent = GetComponent<XRGrabInteractable>();
+        sonarScript = SimpleSonarShader_Parent.Instance;
     }
 
     private void FixedUpdate()
