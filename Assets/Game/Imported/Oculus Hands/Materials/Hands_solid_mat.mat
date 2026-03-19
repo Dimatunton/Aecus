@@ -21,21 +21,23 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Hands_solid_mat
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _SPECULARHIGHLIGHTS_OFF
+  m_ValidKeywords: []
   m_InvalidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  - _EMISSION
   - _GLOSSINESS_FROM_BASE_ALPHA
+  - _SPECULARHIGHLIGHTS_OFF
   - _SPECULAR_COLOR
-  m_LightmapFlags: 6
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _Mode
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -72,11 +74,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 04b5bc2b27f5eaa4f96de6f48c623423, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: 86a7df07cb29b4c40b9dbbbb11eac29b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -106,23 +112,34 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
+    - _AlphaFalloff: 1.5
+    - _ApertureSize: 0.7
     - _Blend: 0
     - _BumpScale: 1
+    - _ColorMask: 15
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _DstBlend: 10
+    - _EdgeSoftness: 0.2
     - _FadeEnd: 0.5
     - _FadeStart: 0.5
+    - _FeatheringEffect: 0.2
     - _Fresnel: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0
     - _GlossinessSource: 0
     - _GlossyReflections: 1
+    - _HeadFalloff: 1.5
     - _Intensity: 0.5
     - _InvFade: 1
+    - _LengthScale: 1
+    - _MainTexUseWorld: 0
+    - _MainTexWorldScale: 1
     - _Metallic: 0
-    - _Mode: 0
+    - _Mode: 3
+    - _NoiseScale: 1
+    - _NoiseStrength: 0.45
     - _OcclusionStrength: 1
     - _OutlineWidth: 0.005
     - _Parallax: 0.02
@@ -134,18 +151,37 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecSource: 0
     - _SpecularHighlights: 0
+    - _Speed: 1
     - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
     - _Surface: 0
+    - _SwayAmount: 0.5
+    - _SwayFalloff: 1.8
+    - _SwayFrequency: 1
+    - _TemporalBlend: 0.6
     - _Thickness: 0.5
     - _UVSec: 0
-    - _ZWrite: 1
+    - _UseUIAlphaClip: 0
+    - _WaveAmplitude: 0.15
+    - _WaveFrequencyAlong: 2
+    - _WaveSpeed: 1
+    - _WorldLength: 0
+    - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.75}
-    - _Color: {r: 1, g: 1, b: 1, a: 0.75}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
+    - _MainTexScale: {r: 1, g: 1, b: 0, a: 0}
     - _MyColor: {r: 0.87058824, g: 0.87058824, b: 0.87058824, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectColor: {r: 1, g: 0, b: 0, a: 0.5019608}
     - _SpecColor: {r: 0.50735295, g: 0.50735295, b: 0.50735295, a: 1}
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - _VignetteColor: {r: 0, g: 0, b: 0, a: 1}
+    - _VignetteColorBlend: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

@@ -25,6 +25,7 @@ public class OnEnableAddObjectives : MonoBehaviour
         for (int i = 0; i < objectList.Length; i++)
         {
             ObjectivesManager.instance.addObjective(i, objectList[i]);
+            Debug.Log("Added obj:" + objectList[i], gameObject);
             yield return new WaitForSeconds(.5f);
         }
     }

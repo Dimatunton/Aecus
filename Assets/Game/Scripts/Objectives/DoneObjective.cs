@@ -11,6 +11,7 @@ public class DoneObjective : MonoBehaviour
         for (int i = 0; i < objectList.Length; i++)
         {
             ObjectivesManager.instance.doneObjective(objectList[i]);
+            Debug.Log("Done obj:" + objectList[i], gameObject);
         }
     }
 }
