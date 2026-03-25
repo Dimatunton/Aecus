@@ -1248,6 +1248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6631203469474288547}
   - component: {fileID: 1742955529244457027}
+  - component: {fileID: 8101508984892506607}
   m_Layer: 0
   m_Name: RotateBody
   m_TagString: Untagged
@@ -1279,7 +1280,7 @@ RotationConstraint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3981730361155089576}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Weight: 1
   m_RotationAtRest: {x: 0, y: 0, z: 0}
@@ -1292,6 +1293,23 @@ RotationConstraint:
   m_Sources:
   - sourceTransform: {fileID: 6995138132947804175}
     weight: 1
+--- !u!114 &8101508984892506607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3981730361155089576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff78336ab1634742a75b6dd735b924f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveAction: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  cameraTransform: {fileID: 6995138132947804175}
+  rotationSpeed: 10
+  deadZone: 0.1
+  maxAngle: 45
 --- !u!1 &4177366797782148155
 GameObject:
   m_ObjectHideFlags: 0

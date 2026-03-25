@@ -6,7 +6,7 @@ public class DoneObjective : MonoBehaviour
 {
     public string[] objectList;
 
-    private void doneObjective()
+    public void doneObjective()
     {
         for (int i = 0; i < objectList.Length; i++)
         {
