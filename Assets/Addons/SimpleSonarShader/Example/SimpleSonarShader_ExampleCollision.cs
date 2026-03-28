@@ -6,10 +6,24 @@ using UnityEngine;
 
 public class SimpleSonarShader_ExampleCollision : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    public SimpleSonarShader_Parent parent;
+
+    Coroutine sonartimer;
+
+    private void OnTriggerEnter(Collider other)
     {
-        // Start sonar ring from the contact point
-        SimpleSonarShader_Parent parent = GetComponentInParent<SimpleSonarShader_Parent>();
-        if (parent) parent.StartSonarRing(collision.contacts[0].point, collision.impulse.magnitude / 10.0f);
+        if (sonartimer == null)
+        {
+            sonartimer = StartCoroutine(SonarTimer());
+            if (parent) parent.StartSonarRing(transform.position, .5f);
+            print("sonar");
+        }
+        print("collide");
+    }
+
+    IEnumerator SonarTimer()
+    {
+        yield return new WaitForSeconds(.1f);
+        sonartimer = null;
     }
 }
