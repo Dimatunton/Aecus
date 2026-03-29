@@ -775,7 +775,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1300033411600171657}
   m_Enabled: 1
   m_CastShadows: 0
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -3179,6 +3179,7 @@ GameObject:
   - component: {fileID: 5242758136046462204}
   - component: {fileID: 5593118088666135107}
   - component: {fileID: 8497034952944221214}
+  - component: {fileID: 7991445157660832799}
   m_Layer: 31
   m_Name: Player no weapon_prefab
   m_TagString: Untagged
@@ -3353,6 +3354,46 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7991445157660832799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288202164547526498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24633a5d35dfa549ac46d4d8e248f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showRange: 1
+  primaryButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Primary Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 554108e8-fbc1-45fc-9c6d-4c3285234e73
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 7a6aee50-f87d-440e-b571-a034b9b17d1d
+        m_Path: <XRController>{RightHand}/select
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Primary Button
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: -3599823989380923159, guid: 0be0028c24f2a4c14a96b6aa39055933, type: 3}
+  scent: {fileID: 4811553453163691539, guid: 6ab259c135df94a4db3e63a90f9457b0, type: 3}
+  scentMat: {fileID: 2100000, guid: 2f3ed8cbe5215ae44971407bbbebe2b5, type: 2}
+  radius: 15
+  lingerTime: 5
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &7810580138232993812
 GameObject:
   m_ObjectHideFlags: 0

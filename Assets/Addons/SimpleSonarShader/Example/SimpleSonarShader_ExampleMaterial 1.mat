@@ -70,7 +70,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EmissionStrength: 1
+    - _EmissionStrength: 0.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -86,11 +86,11 @@ Material:
     - _OutlineWidth: 0.005
     - _OwnerHighlightStrength: 0.75
     - _Parallax: 0.02
-    - _RingColorIntensity: 1
+    - _RingColorIntensity: 0.5
     - _RingIntensityScale: 2
     - _RingRange: 5
-    - _RingSpeed: 2
-    - _RingWidth: 1.5
+    - _RingSpeed: 1
+    - _RingWidth: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -105,5 +105,5 @@ Material:
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 1, b: 0.035513878, a: 1}
     - _OwnerHighlightColor: {r: 1, g: 1, b: 0, a: 1}
-    - _RingColor: {r: 0.672, g: 1, b: 1, a: 1}
+    - _RingColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
