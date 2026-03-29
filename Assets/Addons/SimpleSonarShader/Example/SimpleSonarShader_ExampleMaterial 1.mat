@@ -87,7 +87,7 @@ Material:
     - _OwnerHighlightStrength: 0.75
     - _Parallax: 0.02
     - _RingColorIntensity: 0.5
-    - _RingIntensityScale: 2
+    - _RingIntensityScale: 1
     - _RingRange: 5
     - _RingSpeed: 1
     - _RingWidth: 1
@@ -105,5 +105,5 @@ Material:
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 1, b: 0.035513878, a: 1}
     - _OwnerHighlightColor: {r: 1, g: 1, b: 0, a: 1}
-    - _RingColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RingColor: {r: 0.54245275, g: 1, b: 0.9956539, a: 0.5254902}
   m_BuildTextureStacks: []

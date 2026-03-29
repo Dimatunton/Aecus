@@ -5011,6 +5011,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 461600112155071445, guid: 785a10fb660c2cd42ad222a363a67847, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2313019304454120405, guid: 785a10fb660c2cd42ad222a363a67847, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2
@@ -5143,6 +5147,10 @@ PrefabInstance:
       propertyPath: m_InteractionLayers.m_Bits
       value: 3757047809
       objectReference: {fileID: 0}
+    - target: {fileID: 5760942622106374391, guid: 785a10fb660c2cd42ad222a363a67847, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7288202164547526498, guid: 785a10fb660c2cd42ad222a363a67847, type: 3}
       propertyPath: m_Name
       value: Player no weapon_prefab
@@ -5150,6 +5158,10 @@ PrefabInstance:
     - target: {fileID: 7884643902547008114, guid: 785a10fb660c2cd42ad222a363a67847, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 3757047809
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991445157660832799, guid: 785a10fb660c2cd42ad222a363a67847, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16382,7 +16394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &685778330
 Transform:
   m_ObjectHideFlags: 0
@@ -41656,7 +41668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1785064713
 Transform:
   m_ObjectHideFlags: 0

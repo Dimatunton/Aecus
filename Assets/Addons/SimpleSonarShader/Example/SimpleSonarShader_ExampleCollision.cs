@@ -6,10 +6,14 @@ using UnityEngine;
 
 public class SimpleSonarShader_ExampleCollision : MonoBehaviour
 {
-    public SimpleSonarShader_Parent parent;
+    SimpleSonarShader_Parent parent;
 
     Coroutine sonartimer;
 
+    public void Start()
+    {
+        parent = SimpleSonarShader_Parent.Instance;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (sonartimer == null)
