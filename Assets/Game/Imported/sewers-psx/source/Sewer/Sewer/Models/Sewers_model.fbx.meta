@@ -3,7 +3,32 @@ guid: ab67558cbc97fe949be7bc6aa5d7eb20
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Garbage_bag
+    second: {fileID: 2100000, guid: a65413d838aa91745ac5510a6f2a693d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brick_modern
+    second: {fileID: 2100000, guid: a65413d838aa91745ac5510a6f2a693d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brick_modern_01
+    second: {fileID: 2100000, guid: 41d76b691801efd44a3752dafa1cf1b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brick_pavement
+    second: {fileID: 2100000, guid: 379020c32f9495b4c9647660bcca3627, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bricks
+    second: {fileID: 2100000, guid: e6354a4d2dc014e4785f1f99a6c2776b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -6,15 +6,10 @@ using UnityEngine.AI;
 
 public class ScentBehavior : MonoBehaviour
 {
-    [Header("References")]
-    [Tooltip("Target to follow with the scent trail.")]
     public Transform target;
 
-    [Tooltip("SplineComputer to render the scent trail.")]
     public SplineComputer spline;
 
-    [Header("NavMesh Settings")]
-    [Tooltip("NavMesh agent type name to use for pathfinding (optional).")]
     public string agentTypeName = "Humanoid";
 
     private NavMeshPath navPath;
@@ -30,7 +25,6 @@ public class ScentBehavior : MonoBehaviour
 
     int agentTypeId = GetAgentTypeId(agentTypeName);
 
-    // Sample start and end positions on the NavMesh
     Vector3 startPos = transform.position;
     Vector3 endPos = target.position;
     NavMeshHit hit;

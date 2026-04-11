@@ -6,10 +6,13 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Cane : MonoBehaviour
 {
     public SimpleSonarShader_Parent sonarScript = null;
+    public float hugeSonarInterval = 1f;
 
     private Rigidbody rb;
     private bool isGrabbed = false;
     private XRGrabInteractable grabComponent;
+
+    Coroutine onTapCoroutine = null;
 
     private void Start()
     {
@@ -46,7 +49,23 @@ public class Cane : MonoBehaviour
        
         if(grabComponent.interactorsSelecting.Count > 0)
         {
-            sonarScript.StartSonarRing(collision.contacts[0].point, 10f);
+            if(onTapCoroutine == null)
+            {
+                onTapCoroutine = StartCoroutine(onTap(collision.contacts[0].point));
+            }
+            else
+            {
+                sonarScript.StartSonarRing(collision.contacts[0].point, 5f);
+            }
+            
         }
     }
+    
+    IEnumerator onTap(Vector3 contactPoint)
+    {
+        sonarScript.StartSonarRing(contactPoint, 15f);
+        yield return new WaitForSeconds(hugeSonarInterval);
+        onTapCoroutine = null;
+    }
+
 }

@@ -16407,7 +16407,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2124273620}
   m_Father: {fileID: 1435868679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!320 &685778331
@@ -16441,6 +16442,8 @@ PlayableDirector:
     value: {fileID: 504671930}
   - key: {fileID: 1334050492320723654, guid: 6477061f591f2c24ab832c4ac9c3ce28, type: 2}
     value: {fileID: 1733742924}
+  - key: {fileID: -6118153842115975091, guid: 6477061f591f2c24ab832c4ac9c3ce28, type: 2}
+    value: {fileID: 2124273619}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &691915008
@@ -23524,7 +23527,7 @@ AudioSource:
   m_GameObject: {fileID: 966112504}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3935983747289336689, guid: 0a30f0e7699d4a64aa3476ed51621ace, type: 2}
   m_audioClip: {fileID: 8300000, guid: 15a487bb8c397b64caa67118185722c0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -28438,7 +28441,7 @@ AudioSource:
   m_GameObject: {fileID: 1238541860}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3935983747289336689, guid: 0a30f0e7699d4a64aa3476ed51621ace, type: 2}
   m_audioClip: {fileID: 8300000, guid: d06d79424f85a1e4db17676d0e4b3cf9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -36030,7 +36033,7 @@ AudioSource:
   m_GameObject: {fileID: 1525064690}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3935983747289336689, guid: 0a30f0e7699d4a64aa3476ed51621ace, type: 2}
   m_audioClip: {fileID: 8300000, guid: 15a487bb8c397b64caa67118185722c0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.613
@@ -39783,7 +39786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1733742925
 Transform:
   m_ObjectHideFlags: 0
@@ -40855,7 +40858,7 @@ AudioSource:
   m_GameObject: {fileID: 1759583222}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3935983747289336689, guid: 0a30f0e7699d4a64aa3476ed51621ace, type: 2}
   m_audioClip: {fileID: 8300000, guid: e24a005f2c7b8cc4cbeb1aa14881c8f6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -45691,7 +45694,7 @@ AudioSource:
   m_GameObject: {fileID: 1914850792}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3935983747289336689, guid: 0a30f0e7699d4a64aa3476ed51621ace, type: 2}
   m_audioClip: {fileID: 8300000, guid: d62a5fbe1d1c2114282009e8da7b5d5a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -50018,6 +50021,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2fe76d75b2272414f969f03fa21b2fbf, type: 3}
   m_PrefabInstance: {fileID: 2121071115}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2124273619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124273620}
+  - component: {fileID: 2124273621}
+  m_Layer: 0
+  m_Name: ChangeScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2124273620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124273619}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 685778330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124273621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124273619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5962f888bcd320c479c8d210a6e564cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: 2_SecondLevel_scene
 --- !u!1 &2124554397
 GameObject:
   m_ObjectHideFlags: 0

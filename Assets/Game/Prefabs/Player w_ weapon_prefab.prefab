@@ -875,6 +875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonarScript: {fileID: 0}
+  hugeSonarInterval: 1
 --- !u!65 &4124968142443654080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3878,7 +3879,7 @@ GameObject:
   - component: {fileID: 2172881762882696314}
   m_Layer: 31
   m_Name: Player w_ weapon_prefab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

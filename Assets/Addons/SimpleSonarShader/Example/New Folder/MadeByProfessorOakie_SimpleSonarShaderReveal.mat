@@ -31,7 +31,7 @@ Material:
     m_Floats:
     - _RingIntensity: 1
     - _RingSpeed: 0.5
-    - _RingWidth: 1
+    - _RingWidth: 1.5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _HiddenColor: {r: 0, g: 0, b: 0, a: 1}

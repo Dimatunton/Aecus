@@ -19,10 +19,8 @@ public class SimpleSonarShader_ExampleCollision : MonoBehaviour
         if (sonartimer == null)
         {
             sonartimer = StartCoroutine(SonarTimer());
-            if (parent) parent.StartSonarRing(transform.position, .5f);
-            print("sonar");
+            if (parent) parent.StartSonarRing(transform.position, 1f);
         }
-        print("collide");
     }
 
     IEnumerator SonarTimer()
