@@ -75,7 +75,7 @@ Material:
     - _DashDensity: 3
     - _DashSharpness: 15
     - _DetailNormalMapScale: 1
-    - _Distortion: 0.5
+    - _Distortion: 0.2
     - _DstBlend: 10
     - _EdgeSoftness: 0.2
     - _Emission: 0.91
@@ -93,13 +93,13 @@ Material:
     - _NoiseScale: 1
     - _NoiseStrength: 0.45
     - _OcclusionStrength: 1
-    - _OverallAlpha: 1.0126777
+    - _OverallAlpha: 1.0133145
     - _Parallax: 0.02
     - _Sharpness: 0.86
     - _SideFade: 0.222
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 0.64
+    - _Speed: 1.5
     - _SrcBlend: 5
     - _SwayAmount: 0.5
     - _SwayFalloff: 1.8

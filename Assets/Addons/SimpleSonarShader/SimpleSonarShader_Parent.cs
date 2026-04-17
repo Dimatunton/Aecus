@@ -9,7 +9,7 @@ public class SimpleSonarShader_Parent : MonoBehaviour
     public static SimpleSonarShader_Parent Instance;
 
     // All the renderers that will have the sonar data sent to their shaders.
-    private Renderer[] ObjectRenderers;
+    public Renderer[] ObjectRenderers;
 
     // Throwaway values to set position to at the start.
     private static readonly Vector4 GarbagePosition = new Vector4(-5000, -5000, -5000, -5000);

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class SimpleSonarShader_ExampleConfigureChildren : MonoBehaviour {
 
-    public Material SonarMaterial;
+    public Material Sonarmaterial;
 
     private void Start()
     {
@@ -18,7 +18,7 @@ public class SimpleSonarShader_ExampleConfigureChildren : MonoBehaviour {
         //foreach (Renderer rend in GetComponentsInChildren<Renderer>(true))
         //{
         //    Texture mainTex = rend.material.mainTexture;
-        //    rend.material = SonarMaterial;
+        //    rend.material = Sonarmaterial;
         //    rend.material.mainTexture = mainTex;
         //}
 
@@ -31,7 +31,7 @@ public class SimpleSonarShader_ExampleConfigureChildren : MonoBehaviour {
                 Texture mainTex = mats[i].GetTexture("_MainTex");
                 Color color = mats[i].color;
 
-                Material newMat = new Material(SonarMaterial);
+                Material newMat = new Material(Sonarmaterial);
                 newMat.SetTexture("_MainTex", mainTex);
                 newMat.color = color;
 

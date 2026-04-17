@@ -6427,7 +6427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e8252f3d86abf44ba9effe8def2d81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 0a30f0e7699d4a64aa3476ed51621ace, type: 2}
   masterSlider: {fileID: 2596556368514418964}
   musicSlider: {fileID: 8784744996764363976}
   SFXSlider: {fileID: 5342283643094418310}
@@ -8969,7 +8969,7 @@ GameObject:
   - component: {fileID: 7991445157660832799}
   m_Layer: 31
   m_Name: Player no weapon_prefab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

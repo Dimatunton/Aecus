@@ -6,6 +6,9 @@ using UnityEngine.AI;
 
 public class ScentBehavior : MonoBehaviour
 {
+    public float scentLingerTimer = 5f;
+    private float timer = 0f;
+
     public Transform target;
 
     public SplineComputer spline;
@@ -17,6 +20,15 @@ public class ScentBehavior : MonoBehaviour
     private void Start()
     {
         _ = GenerateScentTrailAsync();
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer > scentLingerTimer)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private async Task GenerateScentTrailAsync()
@@ -100,8 +112,8 @@ public class ScentBehavior : MonoBehaviour
         spline.SetPoints(points);
 
         // Optionally, set point sizes for visual effect
-        float baseSize = 0.75f;
-        float increment = 0.8f / count;
+        float baseSize = 0.5f;
+        float increment = 0.2f / count;
         for (int i = 0; i < count; i++)
         {
             spline.SetPointSize(i, baseSize + increment * i);
