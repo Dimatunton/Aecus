@@ -71,15 +71,18 @@ public class Shotgun : MonoBehaviour
 
                 Physics.Raycast(new Vector3(gunpont.position.x + xrandom, gunpont.position.y + yrandom, gunpont.position.z + zrandom), gunpont.forward, out hit, 25f);
 
-                float sonarScale = Random.Range(2f, 4f);
-                GameObject SC = Instantiate(sonarScanPrefab, hit.point,Quaternion.identity);
-                SC.GetComponent<SonarScan>().scanRange = sonarScale;
-                SC.SetActive(true);
-
-                SimpleEnemyAI ai;
-                if (hit.collider.TryGetComponent<SimpleEnemyAI>(out ai))
+                if(hit.collider != null)
                 {
-                    ai.hit(1);
+                    float sonarScale = Random.Range(2f, 4f);
+                    GameObject SC = Instantiate(sonarScanPrefab, hit.point, Quaternion.identity);
+                    SC.GetComponent<SonarScan>().scanRange = sonarScale;
+                    SC.SetActive(true);
+
+                    SimpleEnemyAI ai;
+                    if (hit.collider.TryGetComponent<SimpleEnemyAI>(out ai))
+                    {
+                        ai.hit(1);
+                    }
                 }
             }
             bulletCount--;

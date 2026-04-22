@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void InfiniteMode()
     {
-        SceneManager.LoadScene("Infinite Mode_scene");
+        SceneManager.LoadScene("Battle mode_scene");
     }
 
     public void PlayButton()

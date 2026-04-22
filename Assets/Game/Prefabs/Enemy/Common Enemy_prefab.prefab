@@ -65,10 +65,12 @@ MonoBehaviour:
   detectDuration: 2.7
   wanderRadius: 1
   wanderDelay: 5
+  hitStunDuration: 0.7
   idle: {fileID: 8300000, guid: b108db8be286602438cd239ab3b52657, type: 3}
   detect: {fileID: 8300000, guid: b2b9bd2b95a8e2144b75f9d7b2e8272a, type: 3}
   walk: {fileID: 8300000, guid: f574eaaee4f55d74285cc76bd06cc55c, type: 3}
   attack: {fileID: 8300000, guid: aa26d76ae17534b4bbe1b704650aabd9, type: 3}
+  hurt: {fileID: 8300000, guid: b2b9bd2b95a8e2144b75f9d7b2e8272a, type: 3}
   death: {fileID: 8300000, guid: 8c9fa5956e385df4683cd6cd63d06518, type: 3}
   animator: {fileID: 1507951897616661934}
 --- !u!136 &3383158513512041320
