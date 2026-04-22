@@ -5,20 +5,25 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Cane : MonoBehaviour
 {
-    public SimpleSonarShader_Parent sonarScript = null;
-    public float hugeSonarInterval = 1f;
+    public float hugeSonarInterval = 2f;
+    public enemy_damage enemy_Damage;
 
     private Rigidbody rb;
     private bool isGrabbed = false;
     private XRGrabInteractable grabComponent;
+    GameObject sonarScanPrefab;
 
     Coroutine onTapCoroutine = null;
 
+
+    private void Awake()
+    {
+        sonarScanPrefab = Resources.Load<GameObject>("Prefabs/SonarScan_prefab");
+    }
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         grabComponent = GetComponent<XRGrabInteractable>();
-        sonarScript = SimpleSonarShader_Parent.Instance;
     }
 
     private void FixedUpdate()
@@ -31,41 +36,46 @@ public class Cane : MonoBehaviour
     }
     public void selected()
     {
+        enemy_Damage.enabled = true;
         isGrabbed = true;
     }
 
     public void unselected()
     {
         isGrabbed = false;
+        enemy_Damage.enabled = false;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(!sonarScript)
+        if(grabComponent.interactorsSelecting.Count > 0) // add && isgrabbed? so it will only sonar when selected like damage only enemy on grabbed in selected() and unselected()
         {
-            Debug.LogError("No Sonar Script assigned to the cane!");
-            return;
-        }
-       
-        if(grabComponent.interactorsSelecting.Count > 0)
-        {
-            if(onTapCoroutine == null)
+            if (collision.gameObject.GetComponent<SimpleEnemyAI>())
+            {
+                collision.gameObject.GetComponent<SimpleEnemyAI>().hit(1);
+            }
+            if (onTapCoroutine == null)
             {
                 onTapCoroutine = StartCoroutine(onTap(collision.contacts[0].point));
             }
             else
             {
-                sonarScript.StartSonarRing(collision.contacts[0].point, 5f);
+                sonarScanSpawn(collision.contacts[0].point, 5f);
             }
-            
         }
     }
     
     IEnumerator onTap(Vector3 contactPoint)
     {
-        sonarScript.StartSonarRing(contactPoint, 15f);
+        sonarScanSpawn(contactPoint, 15f);
         yield return new WaitForSeconds(hugeSonarInterval);
         onTapCoroutine = null;
     }
 
+    void sonarScanSpawn(Vector3 position,float range)
+    {
+        GameObject SC = Instantiate(sonarScanPrefab, position, Quaternion.identity);
+        SC.GetComponent<SonarScan>().scanRange = range;
+        SC.SetActive(true);
+    }
 }

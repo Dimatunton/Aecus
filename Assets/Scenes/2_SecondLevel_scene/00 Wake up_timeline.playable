@@ -207,7 +207,7 @@ MonoBehaviour:
   template:
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 14
-    text: Ughhhh
+    text: 'Ughhhh Mata ko! '
 --- !u!114 &-6650792062777482607
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -710,7 +710,7 @@ MonoBehaviour:
   template:
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 14
-    text: Bakit wala akong makitang liwanag
+    text: WALA AKONG MAKITA!!
 --- !u!114 &-4225582316389059701
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7888,7 +7888,7 @@ MonoBehaviour:
   template:
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 14
-    text: HELLO?!
+    text: Hello! may tao bajan?! kaialngan ko ng tulong
 --- !u!114 &6981592229686898322
 MonoBehaviour:
   m_ObjectHideFlags: 1

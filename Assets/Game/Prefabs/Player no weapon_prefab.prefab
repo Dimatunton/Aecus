@@ -9176,7 +9176,7 @@ MonoBehaviour:
     m_Reference: {fileID: -3599823989380923159, guid: 0be0028c24f2a4c14a96b6aa39055933, type: 3}
   scent: {fileID: 8314761284679373852, guid: 0a53696c325d0d2428c148769f67c810, type: 3}
   scentMat: {fileID: 2100000, guid: 2f3ed8cbe5215ae44971407bbbebe2b5, type: 2}
-  radius: 15
+  radius: 10
   lingerTime: 5
   EnemyLayer:
     serializedVersion: 2

@@ -13,13 +13,11 @@ public class BulletPouch : MonoBehaviour
 
     public void EnterHover()
     {
-        print("Hovered");
         pouch1.SetActive(false);
         pouch2.SetActive(true);
     }
     public void exitHover()
     {
-        print("unHovered");
         pouch1.SetActive(true);
         pouch2.SetActive(false);
     }

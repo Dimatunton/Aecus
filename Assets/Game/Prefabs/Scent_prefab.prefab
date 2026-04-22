@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1c66e29e1ab134ba77db4bb2b43d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scentLingerTimer: 5
   target: {fileID: 0}
   spline: {fileID: 2058991337261791107}
   agentTypeName: Humanoid

@@ -7,7 +7,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Shotgun : MonoBehaviour
 {
     public Transform gunpont = null;
-    public SimpleSonarShader_Parent sonarScript = null;
     public TextMeshProUGUI ammoText = null;
 
     public float ShotgunSpread = .2f;
@@ -16,14 +15,19 @@ public class Shotgun : MonoBehaviour
     private Rigidbody rb;
     private bool isGrabbed = false;
     private XRGrabInteractable grabComponent;
-    
+
+    GameObject sonarScanPrefab;
+
+    private void Awake()
+    {
+        sonarScanPrefab = Resources.Load<GameObject>("Prefabs/SonarScan_prefab");
+    }
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         grabComponent = GetComponent<XRGrabInteractable>();
         updateBulletCount();
-        sonarScript = SimpleSonarShader_Parent.Instance;
     }
 
     private void FixedUpdate()
@@ -67,12 +71,16 @@ public class Shotgun : MonoBehaviour
 
                 Physics.Raycast(new Vector3(gunpont.position.x + xrandom, gunpont.position.y + yrandom, gunpont.position.z + zrandom), gunpont.forward, out hit, 25f);
 
-                if (!sonarScript)
+                float sonarScale = Random.Range(2f, 4f);
+                GameObject SC = Instantiate(sonarScanPrefab, hit.point,Quaternion.identity);
+                SC.GetComponent<SonarScan>().scanRange = sonarScale;
+                SC.SetActive(true);
+
+                SimpleEnemyAI ai;
+                if (hit.collider.TryGetComponent<SimpleEnemyAI>(out ai))
                 {
-                    Debug.LogError("No Sonar Script assigned to the shotgun!");
-                    return;
+                    ai.hit(1);
                 }
-                sonarScript.StartSonarRing(hit.point, 3f);
             }
             bulletCount--;
             updateBulletCount();
