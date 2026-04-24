@@ -329,9 +329,9 @@ public class SimpleEnemyAI : MonoBehaviour
     void Die()
     {
         if (isDead) return;
-
+        
         isDead = true;
-
+        GetComponent<CapsuleCollider>().enabled = false;
         StopAllCoroutines();
 
         isAttacking = false;

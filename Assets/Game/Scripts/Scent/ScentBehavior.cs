@@ -24,10 +24,13 @@ public class ScentBehavior : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
-        if (timer > scentLingerTimer)
+        if(scentLingerTimer >= 0f) 
         {
-            Destroy(gameObject);
+            timer += Time.deltaTime;
+            if (timer > scentLingerTimer)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

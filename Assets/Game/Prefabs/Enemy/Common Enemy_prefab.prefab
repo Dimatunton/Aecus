@@ -65,7 +65,7 @@ MonoBehaviour:
   detectDuration: 2.7
   wanderRadius: 1
   wanderDelay: 5
-  hitStunDuration: 0.7
+  hitStunDuration: 1.5
   idle: {fileID: 8300000, guid: b108db8be286602438cd239ab3b52657, type: 3}
   detect: {fileID: 8300000, guid: b2b9bd2b95a8e2144b75f9d7b2e8272a, type: 3}
   walk: {fileID: 8300000, guid: f574eaaee4f55d74285cc76bd06cc55c, type: 3}
@@ -93,7 +93,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1.5198419
+  m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.76326025, z: 0}
 --- !u!195 &3842594740950971193
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dab8bc5bd05ed142bad126bf72ff7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineActivated: 1
+  outlineActivated: 0
   outlineLingerDuration: 4
 --- !u!82 &8798477531727049208
 AudioSource:
