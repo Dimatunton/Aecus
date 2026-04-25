@@ -10040,9 +10040,9 @@ MonoBehaviour:
   scentMat: {fileID: 2100000, guid: 2f3ed8cbe5215ae44971407bbbebe2b5, type: 2}
   radius: 10
   lingerTime: 5
-  EnemyLayer:
+  SmellableLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
 --- !u!1 &7370339207792574101
 GameObject:
   m_ObjectHideFlags: 0

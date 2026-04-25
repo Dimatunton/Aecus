@@ -17,7 +17,7 @@ public class SmellSkill : MonoBehaviour
     float matTransparency = 0f;
     float timer = 0f;
 
-    [SerializeField] LayerMask EnemyLayer;
+    [SerializeField] LayerMask SmellableLayer;
 
     List<GameObject> scentGameobjects = new List<GameObject>();
 
@@ -26,7 +26,7 @@ public class SmellSkill : MonoBehaviour
     public void ActivateSmell()
     {
         skillOff();
-        Collider[] enemyCol = Physics.OverlapSphere(transform.position, radius, EnemyLayer, QueryTriggerInteraction.Ignore);
+        Collider[] enemyCol = Physics.OverlapSphere(transform.position, radius, SmellableLayer, QueryTriggerInteraction.Ignore);
 
         if (enemyCol.Length > 0)
         {

@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/2_SecondLevel_scene.unity
     guid: e4253a2e624960d4a8d4451ab7db7fbb
   - enabled: 1
+    path: Assets/Scenes/3_SecondLevel_scene.unity
+    guid: b2bfbc8680b967a40a16fd7e47cfa763
+  - enabled: 1
     path: Assets/Scenes/Battle mode_scene.unity
     guid: d79b92896bc5aeb4e89caf118c83c749
   - enabled: 1
