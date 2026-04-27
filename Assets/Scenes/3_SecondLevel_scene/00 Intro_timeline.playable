@@ -60,11 +60,11 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 1619424112976116517}
-    m_Duration: 2.4034312022849917
+    m_Duration: 6.983333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: 6256758281418868991}
     m_EaseInDuration: 0
-    m_EaseOutDuration: 1.4754180908203125
+    m_EaseOutDuration: 6.983333333333333
     m_BlendInDuration: -1
     m_BlendOutDuration: -1
     m_MixInCurve:

@@ -23,7 +23,7 @@ public class HelpCustomerObjectives : MonoBehaviour
 
     void Update()
     {
-        if (checkFirstAid && checkFirstAid)
+        if (checkFirstAid && checkWaterGlass)
         {
             onObjectiveDone.Invoke();
             Debug.Log("Done!");
