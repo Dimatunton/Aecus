@@ -41,6 +41,7 @@ public class SimpleEnemyAI : MonoBehaviour
 
     // ✅ DAMAGE COOLDOWN (ADDED)
     private float lastDamageTime = -999f;
+    public int damage = 1;
     public float damageCooldown = 0.1f;
 
     private float lastAttackTime;
@@ -332,6 +333,8 @@ public class SimpleEnemyAI : MonoBehaviour
         {
             if (hit.transform == player)
             {
+                Player tempPlayer = hit.transform.GetComponent<Player>();
+                tempPlayer.takeDamage(damage);
                 Debug.Log("Player hit!");
             }
         }
