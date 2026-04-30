@@ -93,7 +93,7 @@ Material:
     - _NoiseScale: 1
     - _NoiseStrength: 0.45
     - _OcclusionStrength: 1
-    - _OverallAlpha: 1.0036895
+    - _OverallAlpha: 0.9254731
     - _Parallax: 0.02
     - _Sharpness: 0.86
     - _SideFade: 0.222

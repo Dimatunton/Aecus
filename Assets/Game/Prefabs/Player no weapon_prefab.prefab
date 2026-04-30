@@ -2186,7 +2186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8403492796126815955
 Transform:
   m_ObjectHideFlags: 0
@@ -10295,7 +10295,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1001145414170618315}
   m_OriginBaseGameObject: {fileID: 7288202164547526498}
   m_CameraFloorOffsetObject: {fileID: 5007636339679338415}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 1
   m_CameraYOffset: 1.75
 --- !u!114 &7749125571400465435
 MonoBehaviour:
@@ -10483,7 +10483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  redImage: {fileID: 481332279566894060}
+  healthRedImage: {fileID: 0}
   onDeath:
     m_PersistentCalls:
       m_Calls:
