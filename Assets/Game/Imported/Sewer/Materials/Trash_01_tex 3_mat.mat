@@ -7,15 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Scent Material_mat
-  m_Shader: {fileID: 4800000, guid: 8b624ef78e25d694cafcda6633b7a07a, type: 3}
+  m_Name: Trash_01_tex 3_mat
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _ALPHABLEND_ON
-  - _EMISSION
-  m_LightmapFlags: 2
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -46,15 +44,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 57b39659fb2789244a3cafb539c84488, type: 3}
+        m_Texture: {fileID: 2800000, guid: 16d09a0dc26467249b4fb2451c950910, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: 68296c77fcc3d2b44ac85671d4ab35a2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -67,53 +61,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaFalloff: 1.5
-    - _AlphaPulseSpeed: 0
-    - _BloomIntensity: 5
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DashDensity: 3
-    - _DashSharpness: 15
     - _DetailNormalMapScale: 1
-    - _Distortion: 0.2
-    - _DstBlend: 10
-    - _EdgeSoftness: 0.2
-    - _Emission: 0.91
-    - _FlowSpeed: 0.2
-    - _Frequency: 20
+    - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HeadFalloff: 1.5
-    - _LengthScale: 1
-    - _MainTexUseWorld: 0
-    - _MainTexWorldScale: 1
     - _Metallic: 0
-    - _Mode: 2
-    - _NoiseScale: 1
-    - _NoiseStrength: 0.45
+    - _Mode: 0
     - _OcclusionStrength: 1
-    - _OverallAlpha: 1.0036895
     - _Parallax: 0.02
-    - _Sharpness: 0.86
-    - _SideFade: 0.222
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 1.5
-    - _SrcBlend: 5
-    - _SwayAmount: 0.5
-    - _SwayFalloff: 1.8
-    - _SwayFrequency: 1
-    - _TemporalBlend: 0.6
-    - _TipFade: 0
+    - _SrcBlend: 1
     - _UVSec: 0
-    - _WaveAmplitude: 0.15
-    - _WaveFrequencyAlong: 2
-    - _WaveSpeed: 1
-    - _WorldLength: 0
-    - _ZWrite: 0
+    - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.25440794, g: 0.8490566, b: 0.18823424, a: 0.5372549}
-    - _EmissionColor: {r: 0.5014824, g: 0.6037736, b: 0.48131007, a: 1}
-    - _MainTexScale: {r: 1, g: 1, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
