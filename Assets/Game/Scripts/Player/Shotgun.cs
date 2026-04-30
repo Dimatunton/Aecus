@@ -56,7 +56,7 @@ public class Shotgun : MonoBehaviour
         if(bulletCount > 0)
         {
             print(bulletCount);
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
                 float tempShotgunSpread = ShotgunSpread;
                 if (grabComponent.interactorsSelecting.Count < 2)
