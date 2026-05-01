@@ -7,7 +7,10 @@ public class Cane : MonoBehaviour
 {
     public float hugeSonarInterval = 2f;
     public enemy_damage enemy_Damage;
+    public AudioClip sonarSFX;
 
+
+    private AudioSource audioSource;
     private Rigidbody rb;
     private bool isGrabbed = false;
     private XRGrabInteractable grabComponent;
@@ -22,6 +25,7 @@ public class Cane : MonoBehaviour
     }
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         grabComponent = GetComponent<XRGrabInteractable>();
     }
@@ -67,6 +71,7 @@ public class Cane : MonoBehaviour
     
     IEnumerator onTap(Vector3 contactPoint)
     {
+        audioSource.PlayOneShot(sonarSFX);
         sonarScanSpawn(contactPoint, 15f);
         yield return new WaitForSeconds(hugeSonarInterval);
         onTapCoroutine = null;

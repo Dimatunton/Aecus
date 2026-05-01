@@ -12,6 +12,11 @@ public class Shotgun : MonoBehaviour
     public float ShotgunSpread = .2f;
     public int bulletCount = 2;
 
+
+    public AudioClip fireSFX;
+    public AudioClip reloadSFX;
+    private AudioSource audioSource;
+
     private Rigidbody rb;
     private bool isGrabbed = false;
     private XRGrabInteractable grabComponent;
@@ -27,6 +32,7 @@ public class Shotgun : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         grabComponent = GetComponent<XRGrabInteractable>();
+        audioSource = GetComponent<AudioSource>();
         updateBulletCount();
     }
 
@@ -56,6 +62,7 @@ public class Shotgun : MonoBehaviour
         if(bulletCount > 0)
         {
             print(bulletCount);
+            audioSource.PlayOneShot(fireSFX,.5f);
             for (int i = 0; i < 5; i++)
             {
                 float tempShotgunSpread = ShotgunSpread;
@@ -107,6 +114,7 @@ public class Shotgun : MonoBehaviour
 
     void updateBulletCount()
     {
+        audioSource.PlayOneShot(reloadSFX);
         ammoText.text = bulletCount.ToString();
         print("Bullet Count is :" + bulletCount);
     }

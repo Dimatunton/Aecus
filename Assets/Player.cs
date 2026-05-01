@@ -54,6 +54,46 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void takeHeal(int healAmount = 1)
+    {
+        health += healAmount;
+        if(health > 5)
+        {
+            health = 5;
+        }
+        Debug.Log(health);
+
+        if (healthRedImage != null)
+        {
+            switch (health)
+            {
+                case 5:
+                    healthRedImage.color = new Color(96, 0, 0, 0f);
+                    break;
+                case 4:
+                    healthRedImage.color = new Color(96, 0, 0, .02f);
+                    break;
+                case 3:
+                    healthRedImage.color = new Color(96, 0, 0, .04f);
+                    break;
+                case 2:
+                    healthRedImage.color = new Color(96, 0, 0, .06f);
+                    break;
+                case 1:
+                    healthRedImage.color = new Color(96, 0, 0, .08f);
+                    break;
+                case 0:
+                    healthRedImage.color = new Color(96, 0, 0, .10f);
+                    GetComponent<Animator>().Play("Death_anim");
+                    break;
+                default:
+                    healthRedImage.color = new Color(96, 0, 0, 0f);
+                    Debug.Log("error");
+                    break;
+            }
+        }
+    }
+
     public void quit()
     {
         Time.timeScale = 1f;
