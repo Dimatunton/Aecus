@@ -17,6 +17,8 @@ public class Shotgun : MonoBehaviour
     public AudioClip reloadSFX;
     private AudioSource audioSource;
 
+    public GameObject fireParticles;
+
     private Rigidbody rb;
     private bool isGrabbed = false;
     private XRGrabInteractable grabComponent;
@@ -62,13 +64,15 @@ public class Shotgun : MonoBehaviour
         if(bulletCount > 0)
         {
             print(bulletCount);
+            fireParticles.SetActive(false);
+            fireParticles.SetActive(true);
             audioSource.PlayOneShot(fireSFX,.5f);
             for (int i = 0; i < 5; i++)
             {
                 float tempShotgunSpread = ShotgunSpread;
                 if (grabComponent.interactorsSelecting.Count < 2)
                 {
-                    tempShotgunSpread = ShotgunSpread + .5f;
+                    tempShotgunSpread = ShotgunSpread + .3f;
                 }
 
                 float xrandom = Random.Range(-tempShotgunSpread, tempShotgunSpread);
