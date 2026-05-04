@@ -1059,6 +1059,7 @@ Transform:
   - {fileID: 8400991991041063357}
   - {fileID: 3469074096853159928}
   - {fileID: 4809571938662474466}
+  - {fileID: 1126984230041449580}
   m_Father: {fileID: 3258313961032177079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &385043531931499564
@@ -12227,6 +12228,7 @@ GameObject:
   - component: {fileID: 7174202748616950693}
   - component: {fileID: 504371558713077023}
   - component: {fileID: 4318765654424704584}
+  - component: {fileID: 5629838834481760692}
   m_Layer: 0
   m_Name: Cane
   m_TagString: Untagged
@@ -12269,7 +12271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hugeSonarInterval: 2
   enemy_Damage: {fileID: 4318765654424704584}
-  sonarSFX: {fileID: 0}
+  sonarSFX: {fileID: 8300000, guid: 69b9c42f83fcdc84eb712dfe5938556a, type: 3}
 --- !u!54 &7174202748616950693
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12488,6 +12490,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516cdd51f9aee8d48a96e1ad3b4c7def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &5629838834481760692
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4384583918370631591}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4462778203478471995
 GameObject:
   m_ObjectHideFlags: 0
@@ -13594,7 +13692,6 @@ Transform:
   - {fileID: 6071086042559265958}
   - {fileID: 1445686036196456733}
   - {fileID: 4656182918169740860}
-  - {fileID: 1126984230041449580}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8274551926515793301
@@ -31592,12 +31689,12 @@ Transform:
   m_GameObject: {fileID: 8982189856886660568}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3090467123826802090}
-  m_Father: {fileID: 3258313961032177079}
+  m_Father: {fileID: 4656182918169740860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1818360609 &7945608225653137112
 RotationConstraint:
@@ -32359,7 +32456,10 @@ MonoBehaviour:
   gunpont: {fileID: 2075937677809685694}
   ammoText: {fileID: 3397280284411133897}
   ShotgunSpread: 0.2
-  bulletCount: 10
+  bulletCount: 2
+  mask:
+    serializedVersion: 2
+    m_Bits: 65
   fireSFX: {fileID: 8300000, guid: 5270531b34a5b264c9f5faafeb6dc6db, type: 3}
   reloadSFX: {fileID: 8300000, guid: 642f6834a4abb3149b21d45b913820c1, type: 3}
   fireParticles: {fileID: 5766833147583134500}

@@ -12,6 +12,8 @@ public class Shotgun : MonoBehaviour
     public float ShotgunSpread = .2f;
     public int bulletCount = 2;
 
+    public LayerMask mask;
+
 
     public AudioClip fireSFX;
     public AudioClip reloadSFX;
@@ -67,7 +69,9 @@ public class Shotgun : MonoBehaviour
             fireParticles.SetActive(false);
             fireParticles.SetActive(true);
             audioSource.PlayOneShot(fireSFX,.5f);
-            for (int i = 0; i < 5; i++)
+
+
+            for (int i = 0; i < 3; i++)
             {
                 float tempShotgunSpread = ShotgunSpread;
                 if (grabComponent.interactorsSelecting.Count < 2)
@@ -98,6 +102,7 @@ public class Shotgun : MonoBehaviour
             }
             bulletCount--;
             updateBulletCount();
+            print("fire");
         }
     }
 

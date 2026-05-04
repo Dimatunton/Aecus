@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         Player.Instance = this;
+        takeHeal(0);
     }
 
     public void takeDamage(int damage = 1)
@@ -83,7 +84,7 @@ public class Player : MonoBehaviour
                     healthRedImage.color = new Color(96, 0, 0, .08f);
                     break;
                 case 0:
-                    healthRedImage.color = new Color(96, 0, 0, .10f);
+                    healthRedImage.color = new Color(96, 0, 0, 1f);
                     GetComponent<Animator>().Play("Death_anim");
                     break;
                 default:
