@@ -6,7 +6,10 @@ using UnityEngine.InputSystem.XR;
 
 public class TutsScript : MonoBehaviour
 {
+    public GameObject clickText;
+
     public UnityEvent onDisable;
+
 
     float timer = 0f;
 
@@ -30,7 +33,7 @@ public class TutsScript : MonoBehaviour
             timer += Time.unscaledDeltaTime;
             return;
         }
-
+        clickText.SetActive(false);
         // Check XR controller buttons only
         foreach (var device in InputSystem.devices)
         {
