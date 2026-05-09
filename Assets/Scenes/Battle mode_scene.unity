@@ -1070,15 +1070,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3842594740950971193, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Speed
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7301722304194889605, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Name
       value: Common Enemy_prefab (3)
       objectReference: {fileID: 0}
     - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: Health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: detectionRange
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8798477531727049208, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: MaxDistance
@@ -1222,15 +1226,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3842594740950971193, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Speed
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7301722304194889605, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Name
       value: Common Enemy_prefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: Health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: detectionRange
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8798477531727049208, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: MaxDistance
@@ -3237,15 +3245,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3842594740950971193, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Speed
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7301722304194889605, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Name
       value: Common Enemy_prefab (6)
       objectReference: {fileID: 0}
     - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: Health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: detectionRange
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8798477531727049208, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: MaxDistance
@@ -4417,6 +4429,88 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &635244218
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1685312024}
+    m_Modifications:
+    - target: {fileID: 857586952530585246, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 857586952530585246, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14902878
+      objectReference: {fileID: 0}
+    - target: {fileID: 857586952530585246, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 857586952530585246, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 857586952530585246, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857586952530585246, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857586952530585246, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857586952530585246, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857586952530585246, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857586952530585246, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3842594740950971193, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_Speed
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301722304194889605, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_Name
+      value: Common Enemy_prefab (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: Health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: detectionRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798477531727049208, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: MaxDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798477531727049208, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+--- !u!4 &635244219 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 857586952530585246, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+  m_PrefabInstance: {fileID: 635244218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &648205775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4553,17 +4647,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 93d2ca29268bb9a48b6194de56af10a2, type: 3}
   m_PrefabInstance: {fileID: 664731751}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &666757420 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4822471220558707000, guid: 97187e3bbc42746469d4d7763bf45f0e, type: 3}
-  m_PrefabInstance: {fileID: 1915201094}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &674461095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6259,15 +6342,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3842594740950971193, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Speed
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7301722304194889605, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Name
       value: Common Enemy_prefab (4)
       objectReference: {fileID: 0}
     - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: Health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: detectionRange
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8798477531727049208, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: MaxDistance
@@ -8390,15 +8477,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3842594740950971193, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Speed
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7301722304194889605, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Name
       value: Common Enemy_prefab (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: Health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: detectionRange
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8798477531727049208, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: MaxDistance
@@ -14837,6 +14928,7 @@ Transform:
   - {fileID: 1860025966}
   - {fileID: 160145205}
   - {fileID: 1131108528}
+  - {fileID: 635244219}
   - {fileID: 118254290}
   - {fileID: 897206634}
   - {fileID: 2043047300}
@@ -15348,15 +15440,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3842594740950971193, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Speed
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7301722304194889605, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Name
       value: Common Enemy_prefab (7)
       objectReference: {fileID: 0}
     - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: Health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: detectionRange
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8798477531727049208, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: MaxDistance
@@ -15442,7 +15538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15502,9 +15598,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3842594740950971193, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: m_Speed
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7301722304194889605, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Name
       value: Common Enemy_prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: Health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: detectionRange
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16290,13 +16398,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -574518769529690271, guid: 97187e3bbc42746469d4d7763bf45f0e, type: 3}
-      propertyPath: healthRedImage
-      value: 
-      objectReference: {fileID: 666757420}
-    - target: {fileID: 2172881762882696314, guid: 97187e3bbc42746469d4d7763bf45f0e, type: 3}
-      propertyPath: SmellableLayer.m_Bits
-      value: 192
+    - target: {fileID: 3090467123826802090, guid: 97187e3bbc42746469d4d7763bf45f0e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090467123826802090, guid: 97187e3bbc42746469d4d7763bf45f0e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090467123826802090, guid: 97187e3bbc42746469d4d7763bf45f0e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090467123826802090, guid: 97187e3bbc42746469d4d7763bf45f0e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.407
       objectReference: {fileID: 0}
     - target: {fileID: 3258313961032177079, guid: 97187e3bbc42746469d4d7763bf45f0e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16337,6 +16453,10 @@ PrefabInstance:
     - target: {fileID: 3258313961032177079, guid: 97187e3bbc42746469d4d7763bf45f0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694280278267171616, guid: 97187e3bbc42746469d4d7763bf45f0e, type: 3}
+      propertyPath: bulletCount
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4993987725354760500, guid: 97187e3bbc42746469d4d7763bf45f0e, type: 3}
       propertyPath: m_Name
@@ -17243,15 +17363,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3842594740950971193, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Speed
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7301722304194889605, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: m_Name
       value: Common Enemy_prefab (5)
       objectReference: {fileID: 0}
     - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
+      propertyPath: Health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485913347678667921, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: detectionRange
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8798477531727049208, guid: b1891fc05b05a2b47916c154d9b2b53c, type: 3}
       propertyPath: MaxDistance

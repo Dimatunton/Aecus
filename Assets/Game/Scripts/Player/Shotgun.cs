@@ -96,7 +96,7 @@ public class Shotgun : MonoBehaviour
                     SimpleEnemyAI ai;
                     if (hit.collider.TryGetComponent<SimpleEnemyAI>(out ai))
                     {
-                        ai.hit(1);
+                        ai.hit(3);
                     }
                 }
             }

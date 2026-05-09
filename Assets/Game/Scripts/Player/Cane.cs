@@ -18,6 +18,7 @@ public class Cane : MonoBehaviour
 
     Coroutine onTapCoroutine = null;
 
+    float timer = 0;
 
     private void Awake()
     {
@@ -30,6 +31,10 @@ public class Cane : MonoBehaviour
         grabComponent = GetComponent<XRGrabInteractable>();
     }
 
+    private void Update()
+    {
+        timer += Time.deltaTime;
+    }
     private void FixedUpdate()
     {
         if (!isGrabbed)
@@ -52,20 +57,24 @@ public class Cane : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(grabComponent.interactorsSelecting.Count > 0) // add && isgrabbed? so it will only sonar when selected like damage only enemy on grabbed in selected() and unselected()
+        if (timer > .1f)
         {
-            if (collision.gameObject.GetComponent<SimpleEnemyAI>())
+            if (grabComponent.interactorsSelecting.Count > 0) // add && isgrabbed? so it will only sonar when selected like damage only enemy on grabbed in selected() and unselected()
             {
-                collision.gameObject.GetComponent<SimpleEnemyAI>().hit(1);
+                if (collision.gameObject.GetComponent<SimpleEnemyAI>())
+                {
+                    collision.gameObject.GetComponent<SimpleEnemyAI>().hit(1);
+                }
+                if (onTapCoroutine == null)
+                {
+                    onTapCoroutine = StartCoroutine(onTap(collision.contacts[0].point));
+                }
+                else
+                {
+                    sonarScanSpawn(collision.contacts[0].point, 5f);
+                }
             }
-            if (onTapCoroutine == null)
-            {
-                onTapCoroutine = StartCoroutine(onTap(collision.contacts[0].point));
-            }
-            else
-            {
-                sonarScanSpawn(collision.contacts[0].point, 5f);
-            }
+            timer = 0;
         }
     }
     
